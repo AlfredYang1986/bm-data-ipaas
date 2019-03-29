@@ -4,18 +4,32 @@
 @import "bi-top-nav";
 @import "dashboard";
 
+html,body { 
+    height: 100%
+}
+
 body {
     margin: 0;
     height: 100%;
     width: 100%;
+    min-height: 100%;
     min-width: 1200px;
+    background-color: $n010;
 }
 
 p {
     margin: 0;
 }
 
+.bi-body {
+    height: 100%;
+}
+
 .bi-page-outer {
     height: -webkit-calc(100% - 64px);
 	height: calc(100% - 64px);
+}
+
+.bp-nav {
+    background-color: $n000;
 }
