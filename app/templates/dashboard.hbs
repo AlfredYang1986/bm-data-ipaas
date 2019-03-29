@@ -1,11 +1,104 @@
 {{#bp-layout direction="col" classNames="normal-page-container dashboard-container"}}
     
     {{#bp-layout direction="row" classNames="section-outer"}}
-
+        {{#bp-page-header classNames="dashboard-header" as |ph|}}
+			{{#ph.body as |body|}}
+				{{#body.left as |left|}}
+					{{#left.item}}
+						品牌名称
+					{{/left.item}}
+				{{/body.left}}
+				{{#body.right}}
+					{{bp-dropdown-simple
+                        choosedValue=cur_market
+                        options=marketArr
+                        optionKey='name'}}
+				{{/body.right}}
+			{{/ph.body}}
+		{{/bp-page-header}}
     {{/bp-layout}}
     {{#bp-layout direction="row" classNames="section-outer"}}
-        {{#bp-layout direction="row" classNames="section-inner"}}
-                11111111111111111
+        {{#bp-layout direction="row" classNames="income-overview-section"}}
+            {{#bp-layout direction="col" main="between" cross="center" classNames="income-overview-section-left bg-white"}}
+                <p class="dashboard-label">总收入</p>
+                <p class="total-income">￥123123123123</p>
+            {{/bp-layout}}
+            {{#bp-layout direction="row" classNames="income-overview-section-right bg-white"}}
+                {{#bp-layout direction="col" main="center" classNames="income-right-item"}}
+                    <p class="dashboard-label">签单课时</p>
+                    <p class="dashboard-content"><span class="signed-hours">46546</span>小时</p>
+                {{/bp-layout}}
+                {{#bp-layout direction="col" main="center" classNames="income-right-item"}}
+                    <p class="dashboard-label">签单课时</p>
+                    <p class="dashboard-content"><span class="cost-hours">46546</span>小时</p>
+                {{/bp-layout}}
+                {{#bp-layout direction="col" main="center" classNames="income-right-item"}}
+                    <p class="dashboard-label">签单课时</p>
+                    <p class="other-income">¥1,000,000</p>
+                {{/bp-layout}}
+            {{/bp-layout}}
+        {{/bp-layout}}
+    {{/bp-layout}}
+    {{#bp-layout direction="row" classNames="section-outer"}}
+        {{#bp-layout direction="row" classNames="status-overview-section"}}
+            {{#bp-layout direction="col" classNames="status-overview-section-left bg-white"}}
+                {{#bp-layout direction="row" classNames="status-overview-section-top"}}
+                    {{#bp-layout direction="col" cross="center" classNames="top-container"}}
+                        {{#bp-layout direction="row" classNames="top-up"}}
+                            <p class="dashboard-label">在校学生</p>
+                        {{/bp-layout}}
+                        {{#bp-layout direction="row" classNames="top-down"}}
+                            <p class="dashboard-content"><span class="big-num">3000</span>人</p>
+                        {{/bp-layout}}
+                    {{/bp-layout}}
+                    {{#bp-layout direction="col" cross="center" classNames="top-container"}}
+                        {{#bp-layout direction="row" classNames="top-up"}}
+                            <p class="dashboard-label">总服务学生</p>
+                        {{/bp-layout}}
+                        {{#bp-layout direction="row" classNames="top-down"}}
+                            <p class="dashboard-content"><span class="big-num">13000</span>人</p>
+                        {{/bp-layout}}
+                    {{/bp-layout}}
+                {{/bp-layout}}
+                {{#bp-layout direction="col" classNames="status-overview-section-bottom"}}
+                    {{#bp-layout direction="row" main="between" classNames="bottom-up"}}
+                        <p class="dashboard-content">在校学生/总服务学生</p>
+                        <p class="dashboard-content">3000/13000</p>
+                    {{/bp-layout}}
+                    {{#bp-layout direction="row" classNames="bottom-down"}}
+                        <p class="dashboard-content">进度条</p>
+                    {{/bp-layout}}
+                {{/bp-layout}}
+            {{/bp-layout}}
+            {{#bp-layout direction="col" classNames="status-overview-section-right bg-white"}}
+                {{#bp-layout direction="row" classNames="status-overview-section-top"}}
+                    {{#bp-layout direction="col" cross="center" classNames="top-container"}}
+                        {{#bp-layout direction="row" classNames="top-up"}}
+                            <p class="dashboard-label">在校学生</p>
+                        {{/bp-layout}}
+                        {{#bp-layout direction="row" classNames="top-down"}}
+                            <p class="dashboard-content"><span class="big-num">3000</span>人</p>
+                        {{/bp-layout}}
+                    {{/bp-layout}}
+                    {{#bp-layout direction="col" cross="center" classNames="top-container"}}
+                        {{#bp-layout direction="row" classNames="top-up"}}
+                            <p class="dashboard-label">总服务学生</p>
+                        {{/bp-layout}}
+                        {{#bp-layout direction="row" classNames="top-down"}}
+                            <p class="dashboard-content"><span class="big-num">13000</span>人</p>
+                        {{/bp-layout}}
+                    {{/bp-layout}}
+                {{/bp-layout}}
+                {{#bp-layout direction="col" classNames="status-overview-section-bottom"}}
+                    {{#bp-layout direction="row" main="between" classNames="bottom-up"}}
+                        <p class="dashboard-content">在校学生/总服务学生</p>
+                        <p class="dashboard-content">3000/13000</p>
+                    {{/bp-layout}}
+                    {{#bp-layout direction="row" classNames="bottom-down"}}
+                        <p class="dashboard-content">进度条</p>
+                    {{/bp-layout}}
+                {{/bp-layout}}
+            {{/bp-layout}}
         {{/bp-layout}}
     {{/bp-layout}}
 {{/bp-layout}}
