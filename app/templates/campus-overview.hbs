@@ -1,6 +1,9 @@
-{{#bp-layout direction='col' classNames='content-top'}}
+{{#bp-layout direction='col' classNames='content'}}
+    {{#link-to 'dashboard' classNames='back'}}
+        返回
+    {{/link-to}}
     {{#bp-layout direction='col' classNames=''}}
-        
+        {{bp-page-header/only-title-desc title="五道口校区概况"}}
     {{/bp-layout}}
 {{/bp-layout}}
 {{outlet}}

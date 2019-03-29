@@ -1,0 +1,10 @@
+.content {
+    padding: 24px;
+}
+.back {
+    margin-bottom: 8px;
+    @extend %p-secondary;
+}
+a.hover {
+    @extend %p-secondary;
+}
