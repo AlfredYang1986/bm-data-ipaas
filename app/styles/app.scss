@@ -28,9 +28,18 @@ p {
 
 .bi-page-outer {
     height: -webkit-calc(100% - 64px);
-	height: calc(100% - 64px);
+    height: calc(100% - 64px);
+}
+
+.bi-page-container {
+    width: 100%;
 }
 
 .bp-nav {
     background-color: $n000;
+}
+
+.normal-page-container {
+    padding: $spacing*3;
+    // width: 100%;
 }
