@@ -8,6 +8,7 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('campus-overview');
+  this.route('dashboard');
 });
 
 export default Router;

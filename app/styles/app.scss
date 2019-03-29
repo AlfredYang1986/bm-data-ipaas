@@ -1,3 +1,9 @@
+@import "ember-bootstrap/bootstrap";
+@import "bp-components";
+
+@import "bi-top-nav";
+@import "dashboard";
+
 body {
     margin: 0;
     height: 100%;
@@ -7,4 +13,9 @@ body {
 
 p {
     margin: 0;
+}
+
+.bi-page-outer {
+    height: -webkit-calc(100% - 64px);
+	height: calc(100% - 64px);
 }
