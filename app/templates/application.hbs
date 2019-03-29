@@ -1,5 +1,16 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+{{#bp-layout direction="col" classNames="bi-body"}}
+    {{bicom/bi-top-nav}}
+    {{#bp-layout direction="row" classNames="bi-page-outer"}}
+        {{#bp-nav theme='light' as |n|}}
+            {{#n.link-to "dashboard"}}{{bp-icon icon='management'}}Live Dashboard{{/n.link-to}}
+            {{!-- {{#n.dropdown title='Charts' icon="management" as |dd|}}
+                {{#dd.link-to "dashboard"}}
+                    Chart-Line
+                {{/dd.link-to}}
+            {{/n.dropdown}} --}}
+        {{/bp-nav}}
+        {{#bp-layout direction="col" classNames="bi-page-container"}}
+            {{outlet}}
+        {{/bp-layout}}
+    {{/bp-layout}}
+{{/bp-layout}}

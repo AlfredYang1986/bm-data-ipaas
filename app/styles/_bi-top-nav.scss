@@ -1,0 +1,16 @@
+.bi-top-nav-outer {
+    width: 100%;
+    height: 64px;
+    background-color: $n000;
+    // background-color: black;
+    padding: $spacing*2 $spacing*3;
+
+    .bi-top-nav-left {
+        p {
+            margin-right: $spacing;
+        }
+    }
+    .bi-top-nav-right {
+
+    }
+}
