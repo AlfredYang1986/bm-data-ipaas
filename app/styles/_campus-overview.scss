@@ -1,10 +1,55 @@
-.content {
-    padding: 24px;
-}
 .back {
     margin-bottom: 8px;
     @extend %p-secondary;
 }
 a.hover {
     @extend %p-secondary;
+}
+.section-area-top {
+    margin-top: 8px;
+}
+.section-right-margin {
+    margin-right: 8px;
+}
+.section-harf-white {
+    padding: 24px;
+    // width: 49%;
+    flex: 1;
+    height: 125px;
+    background: #FFFFFF;
+    .section-secondary-title {
+        margin-bottom: 8px;
+        @extend %p-secondary;
+    }
+    .section-large-number {
+        @extend %title;
+    }
+    .section-center-border {
+        border-left: 1px solid rgba(9,30,66,0.08);
+        border-right: 1px solid rgba(9,30,66,0.08);
+    }
+    .section-in-three {
+        flex: 1;
+        .text-red {
+            @extend %p-primary;
+            color:  #BF2600;
+        }
+        .text-green {
+            @extend %p-primary;
+            color:  #006644;
+        }
+        span {
+            margin-left: 2px;
+            @extend %p-small;
+        }
+        .section-number-small {
+            @extend %header-small;
+        }
+    }
+}
+.tabs-area {
+    margin-top: 24px;
+    .campus-tabs {
+        padding-top: 16px;
+    }
 }
