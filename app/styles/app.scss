@@ -39,6 +39,10 @@ p {
 }
 
 .normal-page-container {
+    width: 100%;
     padding: $spacing*3;
-    // width: 100%;
+}
+
+div.bg-white {
+    background-color: $n000;
 }
