@@ -92,6 +92,11 @@ a.hover {
 }
 .tabs-area {
     margin-top: 24px;
+    .tab-pane {
+        &:focus {
+            outline: none;
+        }
+    }
 }
 .overview-area {
     // height: 630px;
