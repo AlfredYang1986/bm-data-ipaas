@@ -51,10 +51,12 @@
 				{{bp-icon icon="add"}}
 			</span>
 		{{/bp-layout}}
+		{{#each appList as |item|}}
+			{{app-display name=item.name property=item.property timestamp=item.time imgSrc=item.img}}
+		{{/each}}
+		{{!-- {{app-display}}
 		{{app-display}}
-		{{app-display}}
-		{{app-display}}
-		{{app-display}}
+		{{app-display}} --}}
 		{{#bp-layout main="between" classNames="mt-4"}}
 			<span></span>
 			{{bp-pagination/mini
@@ -64,15 +66,17 @@
 	</div>
 	<div class="container p-4 bg-white">
 		{{#bp-layout tagName="h3" main="between" classNames="title"}}
-			<span>已授权APP <span class="ml-2">5</span> </span>
+			<span>已接入API <span class="ml-2">5</span> </span>
 			<span>
 				{{bp-icon icon="add"}}
 			</span>
 		{{/bp-layout}}
+		{{#each apiList as |item|}}
+			{{app-display timeType=1 name=item.name property=item.property timestamp=item.time imgSrc=item.img}}
+		{{/each}}
+		{{!-- {{app-display timeType=1}}
 		{{app-display timeType=1}}
-		{{app-display timeType=1}}
-		{{app-display timeType=1}}
-		{{app-display timeType=1}}
+		{{app-display timeType=1}} --}}
 		{{#bp-layout main="between" classNames="mt-4"}}
 			<span></span>
 			{{bp-pagination/mini
@@ -89,12 +93,14 @@
 		</span>
 	{{/bp-layout}}
 	{{#bp-layout main="between" wrap=true}}
+		{{#each fileList as |item|}}
+			{{file-display fileType=item.type name=item.name size=item.size time=item.time}}
+		{{/each}}
+		{{!-- {{file-display}}
 		{{file-display}}
 		{{file-display}}
 		{{file-display}}
-		{{file-display}}
-		{{file-display}}
-		{{file-display}}
+		{{file-display}} --}}
 	{{/bp-layout}}
 	{{#bp-layout main="between" classNames="mt-4"}}
 		<span></span>

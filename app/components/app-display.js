@@ -51,14 +51,17 @@ export default Component.extend({
 	 * @private
 	 */
 	time: computed('timeType', 'timestamp', function () {
-		// let { timeType, timestamp } = this.getProperties('timeType', 'timestamp');
+		let { timeType, timestamp } = this.getProperties('timeType', 'timestamp');
 
-		let { timeType } = this.getProperties('timeType');
+		let time = new Date(timestamp);
+		// let { timeType } = this.getProperties('timeType');
 
+		window.console.log(time.toLocaleDateString());
+		
 		if (timeType === 0) {
-			return '授权时间 2022-08-08';
+			return '授权时间' + time.toLocaleDateString();
 		}
-		return '接入时间 2022-08-08';
+		return '接入时间' + time.toLocaleDateString();
 
 	}),
 });
