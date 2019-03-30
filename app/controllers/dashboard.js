@@ -14,4 +14,10 @@ export default Controller.extend({
         {name: '知春路校区', num: '10', master: '李飞'},
     ]),
     curPage: 1,
+
+    actions: {
+        yardOnClick() {
+            this.transitionToRoute("campus-overview");
+        }
+    }
 });

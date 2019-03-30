@@ -150,6 +150,7 @@
             .yard-overview-section-content {
                 height: 56px;
                 border-bottom: 1px solid $n030a;
+                cursor: pointer;
 
                 &:nth-last-child(1) {
                     border: none;
