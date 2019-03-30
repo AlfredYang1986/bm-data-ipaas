@@ -1,12 +1,12 @@
 @import "ember-bootstrap/bootstrap";
 @import "bp-components";
 
-@import "bi-top-nav";
 @import "dashboard";
 @import "campus-overview";
 @import "data-platform";
 
 // component
+@import "bi-top-nav";
 @import "app-dispaly";
 @import "file-display";
 
