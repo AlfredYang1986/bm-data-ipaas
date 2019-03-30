@@ -37,11 +37,11 @@ h2.title {
 }
 
 h3.title {
-	span:first-child {
+	span.title {
 		@extend %header-small;
 	}
 
-	span:last-child {
+	span.other {
 		@extend %p-secondary;
 		color: $n300;
 	}

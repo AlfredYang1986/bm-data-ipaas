@@ -1,1 +1,49 @@
-.growth-container {}
+.growth-container {
+	p.title {
+		@extend %p-primary;
+	}
+
+	p.desc {
+		@extend %p-secondary;
+	}
+
+	.cycle {
+		.circle-contaienr {
+			flex: 1;
+			height: 280px;
+		}
+
+		.line-container {
+			width: 48%;
+
+		}
+	}
+
+	.distribution-table {
+		thead {
+			th {
+				@extend %p-small;
+				border: 0;
+			}
+		}
+
+		tbody {
+
+			tr {
+				td {
+					padding-top: 0;
+					padding-bottom: 0;
+					height: 52px;
+					line-height: 52px;
+					@extend %p-primary;
+					border: 0;
+
+					span {
+						cursor: pointer;
+					}
+				}
+
+			}
+		}
+	}
+}

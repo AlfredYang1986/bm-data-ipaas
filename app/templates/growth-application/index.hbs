@@ -3,61 +3,132 @@
 	<p class="title">分销情况</p>
 	{{#bp-dropdown widthSize="auto"   as |dd|}}
 		{{#dd.button}}
-			{{#if tmpRc.id}}
-				<p>{{tmpRc.productConfig.product.name}}</p>
+			{{#if tmpCycle.value}}
+				<p>{{tmpCycle.name}}</p>
 			{{else}}
 				请选择
 			{{/if}}
 			{{bp-icon icon='down'}}
 		{{/dd.button}}
 		{{#dd.menu as |menu|}}
-			{{#each model.goodsConfigs as |gc|}}
-				{{#menu.option value=gc onClick=(action (mut tmpGc))}}
-					{{gc.productConfig.product.name}}
+			{{#each model.cycles as |cycle|}}
+				{{#menu.option value=cycle onClick=(action (mut tmpCycle))}}
+					{{cycle.name}}
 				{{/menu.option}}
 			{{/each}}
 		{{/dd.menu}}
 	{{/bp-dropdown}}
 {{/bp-layout}}
-{{#bp-layout main="between"}}
-	{{#bp-layout direction="col" classNames="p-4"}}
-		<h3 class="title">各内容销售额占比</h3>
-		{{bp-circle}}
-		{{#bp-layout main="center"}}
-		{{/bp-layout}}
-		<p class="desc text-center">
-			<span class="mr-2">总销售额</span>
-			<span>¥1,000,000</span>
-		</p>
+{{#if (bp-eq tmpCycle.value 2)}}
+	{{#bp-layout main="between" wrap=true classNames="cycle mb-5"}}
+		{{#each model.cycleMonth as |cycle|}}
+			{{#bp-layout direction="col"  main="between" 
+				classNames="line-container mr-2 mb-2 p-4 bg-white"}}
+				<p class="title">{{cycle.title}}</p>
+				{{bp-line
+					lineData=cycle.line.lineData
+					lineColor=model.lineColor
+					legendPosition=model.legendPosition}}
+			{{/bp-layout}}
+		{{/each}}
 	{{/bp-layout}}
-	{{#bp-layout direction="col" classNames="p-4"}}
-		<h3 class="title">各内容销售额占比</h3>
-		{{bp-circle}}
-		{{#bp-layout main="center"}}
-		{{/bp-layout}}
-		<p class="desc text-center">
-			<span class="mr-2">总销售额</span>
-			<span>¥1,000,000</span>
-		</p>
+{{else}}
+	{{#bp-layout main="between" classNames="cycle mb-5"}}
+		{{#each model.cycleWeek as |cycle|}}
+			{{#bp-layout direction="col"  main="between"  classNames="circle-contaienr mr-2 p-4 bg-white"}}
+				<p class="title">{{cycle.title}}</p>
+				{{bp-circle circleData=cycle.circle.data 
+			circleColor=cycle.circle.color seriesName=cycle.title
+				widthSize="auto"}}
+				<p class="desc text-center">
+					<span class="mr-2">总销售额</span>
+					<span>¥{{cycle.sales}}</span>
+				</p>
+			{{/bp-layout}}
+		{{/each}}
 	{{/bp-layout}}
-	{{#bp-layout direction="col" classNames="p-4"}}
-		<h3 class="title">各内容销售额占比</h3>
-		{{bp-circle}}
-		{{#bp-layout main="center"}}
-		{{/bp-layout}}
-		<p class="desc text-center">
-			<span class="mr-2">总销售额</span>
-			<span>¥1,000,000</span>
-		</p>
-	{{/bp-layout}}
-	{{#bp-layout direction="col" classNames="p-4"}}
-		<h3 class="title">各内容销售额占比</h3>
-		{{bp-circle}}
-		{{#bp-layout main="center"}}
-		{{/bp-layout}}
-		<p class="desc text-center">
-			<span class="mr-2">总销售额</span>
-			<span>¥1,000,000</span>
-		</p>
-	{{/bp-layout}}
-{{/bp-layout}}
+{{/if}}
+{{#bp-tabs selection=saleContent as |tabs|}}
+	{{#tabs.tablist as |list|}}
+		<li class="nav-item">
+			{{#list.tab
+				selectPaneId='content' 
+				onSelect=(action (mut saleContent))}}分销内容{{/list.tab}}
+		</li>
+		<li class="nav-item">
+			{{#list.tab
+				selectPaneId='channel' 
+				onSelect=(action (mut saleContent))}}分销渠道
+			{{/list.tab}}
+		</li>
+	{{/tabs.tablist}}
+	<div class="tab-content">
+		{{#tabs.pane elementId="content"}}
+			{{#bp-layout main="between" classNames="mt-3 mb-4"}}
+				{{bp-input}}
+				<p>
+					{{#bp-button}}导入内容{{/bp-button}}
+					{{#bp-button}}新建内容{{/bp-button}}
+				</p>
+			{{/bp-layout}}
+			<table class="table distribution-table">
+				<thead>
+					<th>商品名称</th>
+					<th>类型</th>
+					<th>商品售价</th>
+					<th>渠道最低价</th>
+					<th>渠道销量</th>
+					<th>渠道分成总金额</th>
+					<th>总收益</th>
+					<th>操作</th>
+				</thead>
+				<tbody class="bg-white">
+					{{#each model.distributionContents as |dc|}}
+						<tr>
+							<td>{{dc.name}}</td>
+							<td>{{dc.type}}</td>
+							<td>{{dc.price}}</td>
+							<td>{{dc.lowestPrice}}</td>
+							<td>{{dc.salesVolume}}</td>
+							<td>{{dc.divided}}</td>
+							<td>{{dc.income}}</td>
+							<td><span>{{bp-icon icon="more"}}</span></td>
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		{{/tabs.pane}}
+		{{#tabs.pane elementId="channel"}}
+			{{#bp-layout main="between" classNames="mt-3 mb-4"}}
+				{{bp-input}}
+				{{#bp-button}}新增渠道{{/bp-button}}
+			{{/bp-layout}}
+			<table class="table distribution-table">
+				<thead>
+					<th>渠道名称</th>
+					<th>类型</th>
+					<th>渠道等级</th>
+					<th>采购内容总数</th>
+					<th>分销订单总数 </th>
+					<th>分销订单总金额</th>
+					<th>总收益</th>
+					<th>操作</th>
+				</thead>
+				<tbody class="bg-white">
+					{{#each model.distributionChannels as |dc|}}
+						<tr>
+							<td>{{dc.name}}</td>
+							<td>{{dc.type}}</td>
+							<td>{{dc.level}}</td>
+							<td>{{dc.purchase}}</td>
+							<td>{{dc.order}}</td>
+							<td>{{dc.money}}</td>
+							<td>{{dc.income}}</td>
+							<td><span>{{bp-icon icon="more"}}</span></td>
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		{{/tabs.pane}}
+	</div>
+{{/bp-tabs}}
