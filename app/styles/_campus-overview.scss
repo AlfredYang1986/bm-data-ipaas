@@ -30,44 +30,151 @@ a.hover {
     padding: 24px;
     flex: 1;
     background: #FFFFFF;
-    .section-secondary-title {
-        margin-bottom: 8px;
-        @extend %p-secondary;
+}
+.section-with-title {
+    padding: 16px 24px;
+    flex: 1;
+    background: #FFFFFF;
+}
+.text-bottom {
+    margin-bottom: 8px;
+}
+.section-primary-title {
+    font-weight: bold;
+    margin-bottom: 16px;
+    @extend %header-medium;
+}
+.section-secondary-title {
+    @extend %p-secondary;
+}
+.section-number-large {
+    @extend %title;
+}
+.section-number-medium {
+    @extend %header-medium;
+}
+.section-number-small {
+    @extend %header-small;
+}
+.section-center-border {
+    border-left: 1px solid rgba(9,30,66,0.08);
+    border-right: 1px solid rgba(9,30,66,0.08);
+}
+.text-minimum {
+    margin-left: 2px;
+    @extend %p-small;
+}
+.text-color-green {
+    color: #36B37E;
+}
+.text-maximum {
+    font-size: 29px;
+    @extend %title;
+}
+.link-text {
+    @extend %p-primary;
+    color:  #3172E0;
+}
+.section-in-three {
+    flex: 1;
+    .text-red {
+        @extend %p-primary;
+        color:  #BF2600;
     }
-    .section-number-large {
-        @extend %title;
+    .text-green {
+        @extend %p-primary;
+        color:  #006644;
     }
-    .section-number-small {
-        @extend %header-small;
-    }
-    .section-center-border {
-        border-left: 1px solid rgba(9,30,66,0.08);
-        border-right: 1px solid rgba(9,30,66,0.08);
-    }
-    .text-minimum {
-        margin-left: 2px;
-        @extend %p-small;
-    }
-    .text-maximum {
-        font-size: 29px;
-        @extend %title;
-    }
-    .section-in-three {
-        flex: 1;
-        .text-red {
-            @extend %p-primary;
-            color:  #BF2600;
-        }
-        .text-green {
-            @extend %p-primary;
-            color:  #006644;
-        }
 
-    }
+}
+.team-left {
+    margin-left: 38px;
 }
 .tabs-area {
     margin-top: 24px;
-    .section-top {
-        margin-top: 16px;
+}
+.section-top {
+    margin-top: 16px;
+}
+.campus-area {
+    height: 98px;
+    .campus-list {
+        flex: 1;
+    }
+}
+.list-title {
+    width: 119px;
+    margin-right: 16px;
+    @extend %p-primary;
+}
+.market-area {
+    height: 176px;
+    padding-top: 24px;
+}
+.calendar-area {
+    height: 176px;
+    .calendar {
+        margin-right: 81px;
+        width: 144px;
+        height: 154px;
+        background: #FAFBFC;
+    }
+    .blue-dot {
+        margin-right: 11px;
+        width: 8px;
+        height: 8px;
+        background: #3881FF;
+        border-radius: 50%;
+    }
+    .green-dot {
+        margin-right: 11px;
+        width: 8px;
+        height: 8px;
+        background: #00C7E6;
+        border-radius: 50%;
+    }
+    p.list-title {
+        margin-right: 16px;
+        width: 56px;
+    }
+    .list-bottom {
+        margin-bottom: 26px;
+    }
+}
+.efficiency-area {
+    height: 93px;
+    .circle-progress {
+        margin-right: 24px;
+        width: 32px;
+        height: 32px;
+        background: #73ABFF;
+        border-radius: 50%;
+    }
+    .eff-list {
+        flex: 1;
+    }
+}
+.client-area {
+    height: 93px;
+    .client-list {
+        flex: 1;
+    }
+}
+.tech-area {
+    height: 126px;
+    .texh-list {
+        flex: 1;
+    }
+}
+.stud-area {
+    height: 126px;
+    .stud-list {
+        flex: 1;
+    }
+}
+.progress {
+    height: 8px;
+    .bp-progress-bar {
+        background: #79F2C0;
     }
 }
