@@ -18,9 +18,10 @@ export default Controller.extend({
     actions: {
         yardOnClick(id) {
             if (id !== "1") {
-                // this.transitionToRoute("not-found");
+                this.transitionToRoute("page-not-found");
+            } else {
+                this.transitionToRoute("campus-overview");
             }
-            this.transitionToRoute("campus-overview");
         }
     }
 });

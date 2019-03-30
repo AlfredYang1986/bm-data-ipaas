@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('dashboard');
   this.route('data-platform', function() {});
   this.route('growth-application', function() {});
+  this.route('page-not-found');
 });
 
 export default Router;
