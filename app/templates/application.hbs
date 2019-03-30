@@ -2,12 +2,12 @@
     {{bicom/bi-top-nav}}
     {{#bp-layout direction="row" classNames="bi-page-outer"}}
         {{#bp-nav theme='light' as |n|}}
-            {{#n.link-to "dashboard"}}{{bp-icon icon='management'}}Live Dashboard{{/n.link-to}}
-            {{#n.dropdown title='增长应用' icon="management" as |dd|}}
+            {{#n.link-to "dashboard"}}{{bp-icon icon='dashboard'}}Live Dashboard{{/n.link-to}}
+            {{#n.dropdown title='增长应用' icon="growth" as |dd|}}
 				{{#dd.link-to "page-not-found"}}
 					添加应用
                 {{/dd.link-to}}
-				{{#dd.link-to "page-not-found"}}
+				{{#dd.link-to "growth-application"}}
 					分销管理
                 {{/dd.link-to}}
                 {{#dd.link-to "page-not-found"}}
@@ -20,7 +20,7 @@
 					增长BIs
                 {{/dd.link-to}}
 			{{/n.dropdown}}
-            {{#n.dropdown title='下一代教育' icon="management" as |dd|}}
+            {{#n.dropdown title='下一代教育' icon="pc" as |dd|}}
 				{{#dd.link-to "page-not-found"}}
 					教育协作
                 {{/dd.link-to}}
@@ -28,7 +28,7 @@
 					在线教育
                 {{/dd.link-to}}
 			{{/n.dropdown}}
-            {{#n.dropdown title='数据中台' icon="management" as |dd|}}
+            {{#n.dropdown title='数据中台' icon="data" as |dd|}}
                 {{#dd.link-to "data-platform"}}
                     数据管道
                 {{/dd.link-to}}
