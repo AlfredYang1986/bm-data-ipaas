@@ -44,6 +44,7 @@ h3.title {
 	span:last-child {
 		@extend %p-secondary;
 		color: $n300;
+		cursor: pointer;
 	}
 }
 
