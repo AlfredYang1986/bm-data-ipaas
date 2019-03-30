@@ -199,18 +199,35 @@ a.hover {
 	height: 93px;
 
 	.eff-list {
-		-webkit-box-flex: 1;
-		-webkit-flex: 1;
-		-ms-flex: 1;
-		flex: 1;
-        .circle-progress {
-            flex: 1;
-            width: 32px;
-            height: 32px;
-        }
-        .circle-desc {
-            flex: 0 0 38px;
-        }
+		// -webkit-box-flex: 1;
+		// -webkit-flex: 1;
+		// -ms-flex: 1;
+		// flex: 1;
+		width: 226px;
+
+		.bp-circle {
+			height: 100%;
+			width: 100%;
+			text-align: center;
+
+			.echarts-chart {
+				margin: 0 auto;
+				width: 45px;
+				height: 45px;
+
+				&~div {
+					width: 45px;
+					height: 45px;
+				}
+			}
+		}
+
+
+
+
+		.circle-desc {
+			flex: 0 0 38px;
+		}
 	}
 }
 
