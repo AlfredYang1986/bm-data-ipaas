@@ -2,19 +2,19 @@
     {{#link-to 'dashboard' classNames='back'}}
         返回
     {{/link-to}}
-    {{#bp-layout direction='col'}}
+    {{#bp-layout direction='col' classNames='overview-area'}}
         {{bp-page-header/only-title-desc title="五道口校区概况"}}
-        {{#bp-layout direction='row' main='between' classNames='section-area-top'}}
-            {{#bp-layout direction='col' main='between' cross='center' classNames='section-harf-white section-right-margin section-height-first'}}
+        {{#bp-layout direction='row'}}
+            {{#bp-layout direction='col' main='between' cross='center' classNames='section-with-title section-right-margin section-height-first section-area-top'}}
                 <p class="section-secondary-title">校区总收入</p>
                 <p class="text-maximum">¥ 39,760,000</p>
             {{/bp-layout}}
-            {{#bp-layout direction='row' main='center' cross='center' classNames='section-harf-white'}}
+            {{#bp-layout direction='row' main='center' cross='center' classNames='section-with-title section-height-first section-area-top'}}
                 {{#bp-layout direction='col' cross='center' classNames='section-in-three'}}
                     <p class="section-secondary-title text-bottom">签单课时</p>
                     <p class="text-red">53,708<span class="text-minimum">小时</span></p>
                 {{/bp-layout}}
-                {{#bp-layout direction='col' cross='center' classNames='section-in-three section-center-border'}}
+                {{#bp-layout direction='col' cross='center' classNames='section-in-three section-center-border '}}
                     <p class="section-secondary-title text-bottom">总消课时</p>
                     <p class="text-green">53,708<span class="text-minimum">小时</span></p>
                 {{/bp-layout}}
@@ -24,15 +24,15 @@
                 {{/bp-layout}}
             {{/bp-layout}}
         {{/bp-layout}}
-        {{#bp-layout direction='row' main='between' classNames='section-area-top'}}
-            {{#bp-layout direction='col' main='between' classNames='section-harf-white section-right-margin section-height-second'}}
+        {{#bp-layout direction='row'}}
+            {{#bp-layout direction='col' main='between' classNames='section-area-top section-harf-white section-right-margin section-height-second'}}
                 <p class="section-secondary-title">在校学生/总服务学生</p>
                 <p class="section-number-large">660/10,000 <span class="text-minimum">人</span></p>
                 {{#bp-progress classNames='progress' as |p|}}
                 	{{p.bar value=80}}
                 {{/bp-progress}}
             {{/bp-layout}}
-            {{#bp-layout direction='col' main='between' classNames='section-harf-white section-height-second'}}
+            {{#bp-layout direction='col' main='between' classNames='section-area-top section-harf-white section-height-second'}}
                 <p class="section-secondary-title team-left">团队人数</p>
                 <p class="section-number-large team-left">98 <span class="text-minimum">人</span></p>
                 {{#bp-layout direction='row' classNames='team-left'}}
@@ -115,7 +115,7 @@
                         {{#bp-layout direction='col' classNames='section-with-title section-right-margin section-height-third section-area-top'}}
                             {{#bp-layout direction='row' main='between'}}
                                 <p class="section-primary-title">营销日历</p>
-                                {{#link-to 'dashboard' classNames='link-text'}}详情{{/link-to}}
+                                {{#link-to 'page-not-found' classNames='link-text'}}详情{{/link-to}}
                             {{/bp-layout}}
                             {{#bp-layout direction='row' cross='center' classNames='calendar-area'}}
                                 <div class="calendar">
@@ -168,7 +168,7 @@
                         {{#bp-layout direction='col' classNames='section-with-title section-right-margin section-height-forth section-area-top'}}
                             {{#bp-layout direction='row' main='between'}}
                                 <p class="section-primary-title">客户名单</p>
-                                {{#link-to 'dashboard' classNames='link-text'}}详情{{/link-to}}
+                                {{#link-to 'page-not-found' classNames='link-text'}}详情{{/link-to}}
                             {{/bp-layout}}
                             {{#bp-layout direction='row' mian='between' classNames='client-area'}}
                                 {{#bp-layout direction='col' main='center' cross='center' classNames='client-list'}}
@@ -187,7 +187,7 @@
                         {{#bp-layout direction='col' classNames='section-with-title section-right-margin section-height-fifth section-area-top'}}
                             {{#bp-layout direction='row' main='between'}}
                                 <p class="section-primary-title">师训监控</p>
-                                {{#link-to 'dashboard' classNames='link-text'}}详情{{/link-to}}
+                                {{#link-to 'page-not-found' classNames='link-text'}}详情{{/link-to}}
                             {{/bp-layout}}
                             {{#bp-layout direction='row' mian='between' classNames='tech-area'}}
                                 {{#bp-layout direction='col' main='center' cross='center' classNames='texh-list'}}
@@ -215,7 +215,7 @@
                         {{#bp-layout direction='col' classNames='section-with-title section-right-margin section-height-fifth section-area-top'}}
                             {{#bp-layout direction='row' main='between'}}
                                 <p class="section-primary-title">学情监控</p>
-                                {{#link-to 'dashboard' classNames='link-text'}}详情{{/link-to}}
+                                {{#link-to 'page-not-found' classNames='link-text'}}详情{{/link-to}}
                             {{/bp-layout}}
                             {{#bp-layout direction='row' mian='center' classNames='stud-area'}}
                                 {{#bp-layout direction='col' main='center' cross='center' classNames='stud-list'}}
