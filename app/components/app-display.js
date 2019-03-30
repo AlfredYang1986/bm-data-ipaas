@@ -52,16 +52,12 @@ export default Component.extend({
 	 */
 	time: computed('timeType', 'timestamp', function () {
 		let { timeType, timestamp } = this.getProperties('timeType', 'timestamp');
-
 		let time = new Date(timestamp);
-		// let { timeType } = this.getProperties('timeType');
-
-		window.console.log(time.toLocaleDateString());
 		
 		if (timeType === 0) {
-			return '授权时间' + time.toLocaleDateString();
+			return '授权时间 ' + time.toLocaleDateString();
 		}
-		return '接入时间' + time.toLocaleDateString();
+		return '接入时间 ' + time.toLocaleDateString();
 
 	}),
 });
