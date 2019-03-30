@@ -16,7 +16,10 @@ export default Controller.extend({
     curPage: 1,
 
     actions: {
-        yardOnClick() {
+        yardOnClick(id) {
+            if (id !== "1") {
+                // this.transitionToRoute("not-found");
+            }
             this.transitionToRoute("campus-overview");
         }
     }

@@ -123,7 +123,7 @@
                     {{/bp-layout}}
                 {{/bp-layout}}
                 {{#bp-layout direction="col" classNames="yard-overview-list"}}
-                    {{#bp-layout direction="row" main="between" cross="center" classNames="yard-overview-section-content" click=(action "yardOnClick")}}
+                    {{#bp-layout direction="row" main="between" cross="center" classNames="yard-overview-section-content" click=(action "yardOnClick" 1)}}
                         {{#bp-layout direction="row" main="between" cross="center" classNames="content-inner"}}
                             {{#bp-layout direction="row" classNames="content-inner-left"}}
                                 <p class="list-tag">TOP 1</p>
@@ -136,7 +136,7 @@
                             {{/bp-layout}}
                         {{/bp-layout}}
                     {{/bp-layout}}
-                    {{#bp-layout direction="row" main="between" cross="center" classNames="yard-overview-section-content" click=(action "yardOnClick")}}
+                    {{#bp-layout direction="row" main="between" cross="center" classNames="yard-overview-section-content" click=(action "yardOnClick" 2)}}
                         {{#bp-layout direction="row" main="between" cross="center" classNames="content-inner"}}
                             {{#bp-layout direction="row" classNames="content-inner-left"}}
                                 <p class="list-tag">TOP 2</p>
@@ -149,7 +149,7 @@
                             {{/bp-layout}}
                         {{/bp-layout}}
                     {{/bp-layout}}
-                    {{#bp-layout direction="row" main="between" cross="center" classNames="yard-overview-section-content" click=(action "yardOnClick")}}
+                    {{#bp-layout direction="row" main="between" cross="center" classNames="yard-overview-section-content" click=(action "yardOnClick" 3)}}
                         {{#bp-layout direction="row" main="between" cross="center" classNames="content-inner"}}
                             {{#bp-layout direction="row" classNames="content-inner-left"}}
                                 <p class="list-tag">TOP 3</p>
@@ -167,7 +167,7 @@
             {{#bp-layout direction="col" classNames="yard-overview-section-right bg-white"}}
                 {{#bp-layout direction="col" classNames="yard-overview-list"}}
                     {{#each list as |item|}}
-                        {{#bp-layout direction="row" main="between" cross="center" classNames="yard-overview-section-content" click=(action "yardOnClick")}}
+                        {{#bp-layout direction="row" main="between" cross="center" classNames="yard-overview-section-content" click=(action "yardOnClick" item.id)}}
                             {{#bp-layout direction="row" main="between" cross="center" classNames="content-inner"}}
                                 {{#bp-layout direction="row" classNames="content-inner-left"}}
                                     <p class="list-tag">NO.{{item.num}}</p>
