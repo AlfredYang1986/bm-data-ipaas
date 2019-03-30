@@ -143,24 +143,35 @@
                                 <p class="section-primary-title">营销效率</p>
                             {{/bp-layout}}
                             {{#bp-layout direction='row' main='between' classNames='efficiency-area'}}
-                                {{#bp-layout direction='row' main='center' cross='center' classNames='eff-list'}}
-                                    <div class="circle-progress">
-                                        {{!-- {{bp-circle circleData=model.circleData circleColor=model.circleColor}} --}}
-                                    </div>
+                            {{#each model.markering as |mk|}}
+                            {{#bp-layout direction='row' main='between' cross='center' classNames='eff-list p-4'}}
+                                {{#bp-layout direction='row' classNames='circle-progress'}}
+                                    {{bp-circle circleData=mk.circleData circleColor=model.circleColor widthSize="auto"}}
+                                {{/bp-layout}}
+                                {{#bp-layout direction='col' classNames='circle-desc'}}
+                                    <p class="text-minimum text-bottom">实到率</p>
+                                    <p class="section-number-small">{{mk.rate}}</p>
+                                {{/bp-layout}}
+                            {{/bp-layout}}
+                            {{/each}}
+                                {{!-- {{#bp-layout direction='row' main='center' cross='center' classNames='eff-list'}}
+                                    {{#bp-layout direction='row' classNames='circle-progress'}}
+                                        {{bp-circle circleData=circleDataActual circleColor=circleColor widthSize="auto"}}
+                                    {{/bp-layout}}
                                     {{#bp-layout direction='col'}}
                                         <p class="text-minimum text-bottom">实到率</p>
                                         <p class="section-number-small">80%</p>
                                     {{/bp-layout}}
                                 {{/bp-layout}}
                                 {{#bp-layout direction='row' main='center' cross='center' classNames='eff-list'}}
-                                    <div class="circle-progress">
-
-                                    </div>
+                                    {{#bp-layout direction='row' classNames='circle-progress'}}
+                                        {{bp-circle circleData=circleDataActual circleColor=circleColor widthSize="auto"}}
+                                    {{/bp-layout}}
                                     {{#bp-layout direction='col'}}
                                         <p class="text-minimum text-bottom">签单率</p>
                                         <p class="section-number-small">90%</p>
                                     {{/bp-layout}}
-                                {{/bp-layout}}
+                                {{/bp-layout}} --}}
                             {{/bp-layout}}
                         {{/bp-layout}}
 
