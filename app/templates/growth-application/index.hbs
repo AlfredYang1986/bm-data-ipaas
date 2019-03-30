@@ -1,0 +1,63 @@
+{{#bp-layout tagName="h2" main="between" cross="center" 
+	classNames="title px-4"}}
+	<p class="title">分销情况</p>
+	{{#bp-dropdown widthSize="auto"   as |dd|}}
+		{{#dd.button}}
+			{{#if tmpRc.id}}
+				<p>{{tmpRc.productConfig.product.name}}</p>
+			{{else}}
+				请选择
+			{{/if}}
+			{{bp-icon icon='down'}}
+		{{/dd.button}}
+		{{#dd.menu as |menu|}}
+			{{#each model.goodsConfigs as |gc|}}
+				{{#menu.option value=gc onClick=(action (mut tmpGc))}}
+					{{gc.productConfig.product.name}}
+				{{/menu.option}}
+			{{/each}}
+		{{/dd.menu}}
+	{{/bp-dropdown}}
+{{/bp-layout}}
+{{#bp-layout main="between"}}
+	{{#bp-layout direction="col" classNames="p-4"}}
+		<h3 class="title">各内容销售额占比</h3>
+		{{bp-circle}}
+		{{#bp-layout main="center"}}
+		{{/bp-layout}}
+		<p class="desc text-center">
+			<span class="mr-2">总销售额</span>
+			<span>¥1,000,000</span>
+		</p>
+	{{/bp-layout}}
+	{{#bp-layout direction="col" classNames="p-4"}}
+		<h3 class="title">各内容销售额占比</h3>
+		{{bp-circle}}
+		{{#bp-layout main="center"}}
+		{{/bp-layout}}
+		<p class="desc text-center">
+			<span class="mr-2">总销售额</span>
+			<span>¥1,000,000</span>
+		</p>
+	{{/bp-layout}}
+	{{#bp-layout direction="col" classNames="p-4"}}
+		<h3 class="title">各内容销售额占比</h3>
+		{{bp-circle}}
+		{{#bp-layout main="center"}}
+		{{/bp-layout}}
+		<p class="desc text-center">
+			<span class="mr-2">总销售额</span>
+			<span>¥1,000,000</span>
+		</p>
+	{{/bp-layout}}
+	{{#bp-layout direction="col" classNames="p-4"}}
+		<h3 class="title">各内容销售额占比</h3>
+		{{bp-circle}}
+		{{#bp-layout main="center"}}
+		{{/bp-layout}}
+		<p class="desc text-center">
+			<span class="mr-2">总销售额</span>
+			<span>¥1,000,000</span>
+		</p>
+	{{/bp-layout}}
+{{/bp-layout}}

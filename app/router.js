@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('campus-overview');
   this.route('dashboard');
   this.route('data-platform', function() {});
+  this.route('growth-application', function() {});
 });
 
 export default Router;
