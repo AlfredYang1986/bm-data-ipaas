@@ -11,22 +11,46 @@ a.hover {
 .section-right-margin {
     margin-right: 8px;
 }
+.section-height-first {
+    height: 125px;
+}
+.section-height-second {
+    height: 150px;
+}
+.section-height-third {
+    height: 230px;
+}
+.section-height-forth {
+    height: 147px;
+}
+.section-height-fifth {
+    height: 180px;
+}
 .section-harf-white {
     padding: 24px;
-    // width: 49%;
     flex: 1;
-    height: 125px;
     background: #FFFFFF;
     .section-secondary-title {
         margin-bottom: 8px;
         @extend %p-secondary;
     }
-    .section-large-number {
+    .section-number-large {
         @extend %title;
+    }
+    .section-number-small {
+        @extend %header-small;
     }
     .section-center-border {
         border-left: 1px solid rgba(9,30,66,0.08);
         border-right: 1px solid rgba(9,30,66,0.08);
+    }
+    .text-minimum {
+        margin-left: 2px;
+        @extend %p-small;
+    }
+    .text-maximum {
+        font-size: 29px;
+        @extend %title;
     }
     .section-in-three {
         flex: 1;
@@ -38,18 +62,12 @@ a.hover {
             @extend %p-primary;
             color:  #006644;
         }
-        span {
-            margin-left: 2px;
-            @extend %p-small;
-        }
-        .section-number-small {
-            @extend %header-small;
-        }
+
     }
 }
 .tabs-area {
     margin-top: 24px;
-    .campus-tabs {
-        padding-top: 16px;
+    .section-top {
+        margin-top: 16px;
     }
 }
