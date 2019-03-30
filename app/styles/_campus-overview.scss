@@ -127,12 +127,6 @@ a.hover {
 
 .tabs-area {
 	margin-top: 24px;
-
-	.tab-pane {
-		&:focus {
-			outline: none;
-		}
-	}
 }
 
 .overview-area {
@@ -204,19 +198,19 @@ a.hover {
 .efficiency-area {
 	height: 93px;
 
-	.circle-progress {
-		margin-right: 24px;
-		width: 32px;
-		height: 32px;
-		background: #73ABFF;
-		border-radius: 50%;
-	}
-
 	.eff-list {
 		-webkit-box-flex: 1;
 		-webkit-flex: 1;
 		-ms-flex: 1;
 		flex: 1;
+        .circle-progress {
+            flex: 1;
+            width: 32px;
+            height: 32px;
+        }
+        .circle-desc {
+            flex: 0 0 38px;
+        }
 	}
 }
 
