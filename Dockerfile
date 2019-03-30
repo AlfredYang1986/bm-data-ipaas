@@ -26,7 +26,7 @@ RUN git clone https://github.com/AlfredYang1986/bm-data-ipaas.git && \
 	
 WORKDIR /app/BP-Components
 
-RUN git checkout -b frank && \
+RUN git checkout -b frank origin/frank && \
 	npm install && \
 	npm link
 
