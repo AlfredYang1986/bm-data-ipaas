@@ -38,7 +38,10 @@
 
         .income-overview-section-left {
             padding: $spacing*3;
-            flex: 1;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
 
             .total-income {
                 @extend %title;
@@ -46,10 +49,16 @@
         }
         .income-overview-section-right {
             padding: $spacing*3;
-            flex: 1;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
 
             .income-right-item {
-                flex: 1;
+                -webkit-box-flex: 1;
+                -webkit-flex: 1;
+                    -ms-flex: 1;
+                        flex: 1;
                 padding-left: $spacing*3;
                 border-left: 1px solid $n030a;
 
@@ -80,7 +89,10 @@
 
         .status-overview-section-left, .status-overview-section-right {
             padding: $spacing*3;
-            flex: 1;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
             
             .bp-progress-bar {
                 background-color: $g100; 
@@ -90,7 +102,10 @@
                 margin-bottom: $spacing*4;
                 
                 .top-container {
-                    flex: 1;
+                    -webkit-box-flex: 1;
+                    -webkit-flex: 1;
+                        -ms-flex: 1;
+                            flex: 1;
                     
                     .top-up {
                         margin-bottom: $spacing*2;
@@ -124,7 +139,10 @@
         width: 100%;
         
         .yard-overview-section-left, .yard-overview-section-right {
-            flex: 1;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
             padding: $spacing*3;
             
             .list-tag {
@@ -157,7 +175,10 @@
                 }
 
                 .content-inner {
-                    flex: 1;
+                    -webkit-box-flex: 1;
+                    -webkit-flex: 1;
+                        -ms-flex: 1;
+                            flex: 1;
 
                     .content-inner-left {
                         .dashboard-header-small {
