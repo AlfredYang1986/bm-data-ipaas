@@ -66,7 +66,9 @@
                         <p class="dashboard-content">3000/13000</p>
                     {{/bp-layout}}
                     {{#bp-layout direction="row" classNames="bottom-down"}}
-                        <p class="dashboard-content">进度条</p>
+                        {{#bp-progress as |p|}}
+                            {{p.bar value=3000 minValue=0 maxValue=13000}}
+                        {{/bp-progress}}
                     {{/bp-layout}}
                 {{/bp-layout}}
             {{/bp-layout}}
@@ -74,29 +76,115 @@
                 {{#bp-layout direction="row" classNames="status-overview-section-top"}}
                     {{#bp-layout direction="col" cross="center" classNames="top-container"}}
                         {{#bp-layout direction="row" classNames="top-up"}}
-                            <p class="dashboard-label">在校学生</p>
+                            <p class="dashboard-label">总满班数</p>
                         {{/bp-layout}}
                         {{#bp-layout direction="row" classNames="top-down"}}
-                            <p class="dashboard-content"><span class="big-num">3000</span>人</p>
+                            <p class="dashboard-content"><span class="big-num">213</span>班</p>
                         {{/bp-layout}}
                     {{/bp-layout}}
                     {{#bp-layout direction="col" cross="center" classNames="top-container"}}
                         {{#bp-layout direction="row" classNames="top-up"}}
-                            <p class="dashboard-label">总服务学生</p>
+                            <p class="dashboard-label">总开班数</p>
                         {{/bp-layout}}
                         {{#bp-layout direction="row" classNames="top-down"}}
-                            <p class="dashboard-content"><span class="big-num">13000</span>人</p>
+                            <p class="dashboard-content"><span class="big-num">567</span>班</p>
                         {{/bp-layout}}
                     {{/bp-layout}}
                 {{/bp-layout}}
                 {{#bp-layout direction="col" classNames="status-overview-section-bottom"}}
                     {{#bp-layout direction="row" main="between" classNames="bottom-up"}}
-                        <p class="dashboard-content">在校学生/总服务学生</p>
-                        <p class="dashboard-content">3000/13000</p>
+                        <p class="dashboard-content">总满班数/总开班数</p>
+                        <p class="dashboard-content">213/567</p>
                     {{/bp-layout}}
                     {{#bp-layout direction="row" classNames="bottom-down"}}
-                        <p class="dashboard-content">进度条</p>
+                        {{#bp-progress as |p|}}
+                            {{p.bar value=213 minValue=0 maxValue=567}}
+                        {{/bp-progress}}
                     {{/bp-layout}}
+                {{/bp-layout}}
+            {{/bp-layout}}
+        {{/bp-layout}}
+    {{/bp-layout}}
+    {{#bp-layout direction="row" classNames="section-outer"}}
+        {{#bp-layout direction="row" classNames="yard-overview-section"}}
+            {{#bp-layout direction="col" classNames="yard-overview-section-left bg-white"}}
+                {{#bp-layout direction="row" main="between" classNames="yard-overview-section-title"}}
+                    {{#bp-layout direction="row" classNames="title-inner"}}
+                        <p class="dashboard-label">总校区数</p>
+                        <p class="dashboard-mid-title">20</p>
+                    {{/bp-layout}}
+                    {{#bp-layout direction="row" classNames="title-inner"}}
+                        <p class="dashboard-label">总校区数</p>
+                        <p class="dashboard-mid-title">20</p>
+                    {{/bp-layout}}
+                    {{#bp-layout direction="row" classNames="title-inner"}}
+                        <p class="dashboard-label">总校区数</p>
+                        <p class="dashboard-mid-title">20</p>
+                    {{/bp-layout}}
+                {{/bp-layout}}
+                {{#bp-layout direction="col" classNames="yard-overview-list"}}
+                    {{#bp-layout direction="row" main="between" cross="center" classNames="yard-overview-section-content"}}
+                        {{#bp-layout direction="row" main="between" cross="center" classNames="content-inner"}}
+                            {{#bp-layout direction="row" classNames="content-inner-left"}}
+                                <p class="list-tag">TOP 1</p>
+                                <p class="dashboard-header-small">五道口校区</p>
+                                <p class="dashboard-pri">总收入 ¥100,000,000</p>
+                            {{/bp-layout}}
+                            {{#bp-layout direction="row" main="end" classNames="content-inner-right"}}
+                                <p class="dashboard-label">李松校长</p>
+                                <img class="head-img" src="/images/logo_baizao.png"/>
+                            {{/bp-layout}}
+                        {{/bp-layout}}
+                    {{/bp-layout}}
+                    {{#bp-layout direction="row" main="between" cross="center" classNames="yard-overview-section-content"}}
+                        {{#bp-layout direction="row" main="between" cross="center" classNames="content-inner"}}
+                            {{#bp-layout direction="row" classNames="content-inner-left"}}
+                                <p class="list-tag">TOP 2</p>
+                                <p class="dashboard-header-small">三里屯校区</p>
+                                <p class="dashboard-pri">总收入 ¥92,980,000</p>
+                            {{/bp-layout}}
+                            {{#bp-layout direction="row" main="end" classNames="content-inner-right"}}
+                                <p class="dashboard-label">王达校长</p>
+                                <img class="head-img" src="/images/logo_baizao.png"/>
+                            {{/bp-layout}}
+                        {{/bp-layout}}
+                    {{/bp-layout}}
+                    {{#bp-layout direction="row" main="between" cross="center" classNames="yard-overview-section-content"}}
+                        {{#bp-layout direction="row" main="between" cross="center" classNames="content-inner"}}
+                            {{#bp-layout direction="row" classNames="content-inner-left"}}
+                                <p class="list-tag">TOP 3</p>
+                                <p class="dashboard-header-small">中关村校区</p>
+                                <p class="dashboard-pri">总收入 ¥87,430,000</p>
+                            {{/bp-layout}}
+                            {{#bp-layout direction="row" main="end" classNames="content-inner-right"}}
+                                <p class="dashboard-label">蔓丽校长</p>
+                                <img class="head-img" src="/images/logo_baizao.png"/>
+                            {{/bp-layout}}
+                        {{/bp-layout}}
+                    {{/bp-layout}}
+                {{/bp-layout}}
+            {{/bp-layout}}
+            {{#bp-layout direction="col" classNames="yard-overview-section-right bg-white"}}
+                {{#bp-layout direction="col" classNames="yard-overview-list"}}
+                    {{#each list as |item|}}
+                        {{#bp-layout direction="row" main="between" cross="center" classNames="yard-overview-section-content"}}
+                            {{#bp-layout direction="row" main="between" cross="center" classNames="content-inner"}}
+                                {{#bp-layout direction="row" classNames="content-inner-left"}}
+                                    <p class="list-tag">NO.{{item.num}}</p>
+                                    <p class="dashboard-header-small">{{item.name}}</p>
+                                {{/bp-layout}}
+                                {{#bp-layout direction="row" main="end" classNames="content-inner-right"}}
+                                    <p class="dashboard-label">{{item.master}}校长</p>
+                                {{/bp-layout}}
+                            {{/bp-layout}}
+                        {{/bp-layout}}
+                    {{/each}}
+                {{/bp-layout}}
+                {{#bp-layout direction="row" main="end" classNames="yard-overview-pagi"}}
+                    {{bp-pagination/mini
+                        curPage=curPage
+                        totalPageCounts=5 
+                        onClickPage=(action (mut curPage))}}
                 {{/bp-layout}}
             {{/bp-layout}}
         {{/bp-layout}}
