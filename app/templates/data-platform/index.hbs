@@ -1,0 +1,105 @@
+{{#bp-layout tagName="h2" main="between" cross="center" 
+	classNames="px-4 mb-2 bg-white title"}}
+	<p class="title">数据任务 <span>5</span> </p>
+	{{#bp-layout cross="center"}}
+		{{#bp-button type="link"}}详情{{/bp-button}}
+		{{#bp-button type="primary" icon="add"}}
+			新建任务
+		{{/bp-button}}
+	{{/bp-layout}}
+{{/bp-layout}}
+{{#bp-layout direction="col" classNames="mission bg-white p-4 mb-4"}}
+	{{#bp-layout tagName="h3" main="between" cross="center" 
+	classNames="mb-4 title" }}
+		<span>当前任务</span>
+		<span>查看历史</span>
+	{{/bp-layout}}
+	{{#bp-layout main="between" classNames="content"}}
+		{{#bp-layout direction="col" main="between"}}
+			<p class="keys">上传数据量</p>
+			<p>
+				<span class="values">1000</span>
+				<span class="unit">单位</span>
+			</p>
+		{{/bp-layout}}
+		{{#bp-layout direction="col" main="between"}}
+			<p class="keys">上传速率</p>
+			<p>
+				<span class="values">1.2</span>
+				<span class="unit">M/s</span>
+			</p>
+		{{/bp-layout}}
+		{{#bp-layout direction="col" main="between"}}
+			<p class="keys">数据来源
+				<span class="content ml-3">App大众点评</span>
+			</p>
+			<p class="keys">开始时间
+				<span class="content ml-3">2019-03-24 17:00:00</span>
+			</p>
+		{{/bp-layout}}
+	{{/bp-layout}}
+{{/bp-layout}}
+{{#bp-layout tagName="h2" main="between" cross="center" 
+	classNames="px-4 mb-2 bg-white title"}}
+	<p class="title">数据源 </p>
+{{/bp-layout}}
+{{#bp-layout main="between" classNames="authorization mb-2"}}
+	<div class="container p-4 mr-2 bg-white">
+		{{#bp-layout tagName="h3" main="between" classNames="title"}}
+			<span>已授权APP <span class="ml-2">5</span> </span>
+			<span>
+				{{bp-icon icon="add"}}
+			</span>
+		{{/bp-layout}}
+		{{app-display}}
+		{{app-display}}
+		{{app-display}}
+		{{app-display}}
+		{{#bp-layout main="between" classNames="mt-4"}}
+			<span></span>
+			{{bp-pagination/mini
+		totalPageCounts=5 
+		onClickPage=(action (mut appsPage0))}}
+		{{/bp-layout}}
+	</div>
+	<div class="container p-4 bg-white">
+		{{#bp-layout tagName="h3" main="between" classNames="title"}}
+			<span>已授权APP <span class="ml-2">5</span> </span>
+			<span>
+				{{bp-icon icon="add"}}
+			</span>
+		{{/bp-layout}}
+		{{app-display timeType=1}}
+		{{app-display timeType=1}}
+		{{app-display timeType=1}}
+		{{app-display timeType=1}}
+		{{#bp-layout main="between" classNames="mt-4"}}
+			<span></span>
+			{{bp-pagination/mini
+		totalPageCounts=5 
+		onClickPage=(action (mut appsPage))}}
+		{{/bp-layout}}
+	</div>
+{{/bp-layout}}
+{{#bp-layout direction="col" classNames="upload-files p-4 bg-white"}}
+	{{#bp-layout tagName="h3" main="between" classNames="title"}}
+		<span>已上传文档 <span class="ml-2">5</span> </span>
+		<span>
+			{{bp-icon icon="add"}}
+		</span>
+	{{/bp-layout}}
+	{{#bp-layout main="between" wrap=true}}
+		{{file-display}}
+		{{file-display}}
+		{{file-display}}
+		{{file-display}}
+		{{file-display}}
+		{{file-display}}
+	{{/bp-layout}}
+	{{#bp-layout main="between" classNames="mt-4"}}
+		<span></span>
+		{{bp-pagination/mini
+		totalPageCounts=5 
+		onClickPage=(action (mut filesPage))}}
+	{{/bp-layout}}
+{{/bp-layout}}

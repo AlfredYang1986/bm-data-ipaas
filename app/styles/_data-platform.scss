@@ -1,0 +1,58 @@
+h2.title {
+	height: 54px;
+
+	.title {
+		@extend %header-medium;
+
+		span {
+			@extend %p-secondary;
+		}
+	}
+}
+
+.mission {
+	.content {
+		div {
+			flex: 1;
+			font-size: 0;
+
+			p.keys {
+				@extend %p-secondary;
+			}
+
+			span.values {
+				@extend %title;
+			}
+
+			span.unit {
+				margin-left: $spacing-compact;
+				@extend %p-small;
+			}
+
+			span.content {
+				@extend %p-primary;
+			}
+		}
+	}
+}
+
+h3.title {
+	span:first-child {
+		@extend %header-small;
+	}
+
+	span:last-child {
+		@extend %p-secondary;
+		color: $n300;
+	}
+}
+
+.authorization {
+	.container {
+		flex: 1;
+
+
+	}
+}
+
+.upload-files {}

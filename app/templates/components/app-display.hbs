@@ -1,0 +1,10 @@
+{{#bp-layout main="between" cross="end" classNames="content app-display py-4"}}
+	{{#bp-layout }}
+		<img class="mr-2" src={{imgSrc}} alt="">
+		{{#bp-layout direction="col" main="between" classNames="name"}}
+			<p>{{name}}</p>
+			{{#bp-badge pill=false type='secondary'}}{{property}}{{/bp-badge}}
+		{{/bp-layout}}
+	{{/bp-layout}}
+	<p class="time">{{time}}</p>
+{{/bp-layout}}

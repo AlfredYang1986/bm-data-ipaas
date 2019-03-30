@@ -1,0 +1,17 @@
+.file {
+	width: 45%;
+	border-bottom: 1px solid $n030a;
+
+	img {
+		width: $spacing-3;
+		height: $spacing-3;
+	}
+
+	.name {
+		@extend %p-primary;
+	}
+
+	.basic-infos {
+		@extend %p-secondary;
+	}
+}
