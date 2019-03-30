@@ -7,7 +7,8 @@ module.exports = function(defaults) {
 		// Add options here
 		sassOptions: {
 			includePaths: [
-				'bower_components/foundation/scss'
+				'bower_components/foundation/scss',
+				'node_modules/bp-components/app/styles'
 			]
 		}
 	});
