@@ -1,7 +1,16 @@
 import Component from '@ember/component';
+import { computed } from '@ember/object';
 
 export default Component.extend({
 	tagName: '',
+	/**
+	 * fileType
+	 * @property fileType
+	 * @type {string}
+	 * @default '' 
+	 * @public
+	 */
+	fileType: 'unknown',
 	/**
 	 * img src
 	 * @property imgSrc
@@ -9,7 +18,20 @@ export default Component.extend({
 	 * @default '' // should be a loading img resoure
 	 * @public
 	 */
-	imgSrc: 'https://i.loli.net/2019/03/30/5c9edd27e577e.png',
+	// imgSrc: 'https://i.loli.net/2019/03/30/5c9edd27e577e.png',
+	imgSrc: computed('fileType', function () {
+		let { fileType } = this.getProperties('fileType');
+
+		if (fileType === "doc") {
+			return "/images/icon_document_medium@3x.png"
+		} else if (fileType === "pdf") {
+			return "/images/icon_pdf_medium@3x@3x.png"
+		} else if (fileType === "excel") {
+			return "/images/icon_excel_medium@3x.png"
+		} else {
+			return "/images/icon_generic_medium@3x.png"
+		}
+	}),
 	/**
 	 * file 名称
 	 * @property name
