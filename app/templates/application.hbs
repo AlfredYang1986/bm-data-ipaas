@@ -3,11 +3,11 @@
     {{#bp-layout direction="row" classNames="bi-page-outer"}}
             {{#bp-nav theme='light' as |n|}}
                 {{#n.link-to "dashboard"}}{{bp-icon icon='management'}}Live Dashboard{{/n.link-to}}
-                {{!-- {{#n.dropdown title='Charts' icon="management" as |dd|}}
-                    {{#dd.link-to "dashboard"}}
-                        Chart-Line
+                {{#n.dropdown title='数据中台' icon="management" as |dd|}}
+                    {{#dd.link-to "data-platform"}}
+                        数据管道
                     {{/dd.link-to}}
-                {{/n.dropdown}} --}}
+                {{/n.dropdown}}
             {{/bp-nav}}
         {{#bp-layout direction="col" classNames="bi-page-container"}}
             {{outlet}}
