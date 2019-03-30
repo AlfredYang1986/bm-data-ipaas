@@ -47,6 +47,7 @@ h3.title {
 	span.other {
 		@extend %p-secondary;
 		color: $n300;
+		cursor: pointer;
 	}
 }
 
