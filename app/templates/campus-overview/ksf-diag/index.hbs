@@ -7,10 +7,10 @@
 	{{#bp-layout tagName="h3" classNames="title"}}
 		<span class="title">校区总收入</span>
 	{{/bp-layout}}
-	{{#bp-layout main="between" classNames="total-income"}}
-		<div class="p-4">
+	{{#bp-layout main="between" cross="center" classNames="total-income"}}
+		{{#bp-layout main="center" classNames="gauge-container"}}
 			{{bp-gauge value=65 maxValue=100}}
-		</div>
+		{{/bp-layout}}
 		{{#bp-layout direction="col" classNames="p-4"}}
 			<p class="keys">总收入指标</p>
 			<p class="values mb-4">￥1286513</p>
@@ -61,7 +61,7 @@
 		{{#bp-layout}}
 			<div class="keys">
 				<p class="mb-3">指标次数</p>
-				<p>完成次数{{bp-icon icon="trash" size="small"}}</p>
+				<p>完成次数{{bp-icon icon="info" size="small"}}</p>
 			</div>
 			<div class="values">
 				<p class="mb-3 ml-4">6次</p>
@@ -82,7 +82,7 @@
 		{{#bp-layout classNames="item p-4"}}
 			<div class="keys">
 				<p class="mb-3">报表数量</p>
-				<p>提交次数{{bp-icon icon="trash" size="small"}}</p>
+				<p>提交次数{{bp-icon icon="info" size="small"}}</p>
 			</div>
 			<div class="values">
 				<p class="mb-3 ml-4">60份</p>
@@ -91,8 +91,8 @@
 		{{/bp-layout}}
 		{{#bp-layout classNames="item p-4"}}
 			<div class="keys">
-				<p class="mb-3">提交及时率{{bp-icon icon="trash" size="small"}}</p>
-				<p>提交准确率{{bp-icon icon="trash" size="small"}}</p>
+				<p class="mb-3">提交及时率{{bp-icon icon="info" size="small"}}</p>
+				<p>提交准确率{{bp-icon icon="info" size="small"}}</p>
 			</div>
 			<div class="values">
 				<p class="mb-3 ml-4">46%</p>
