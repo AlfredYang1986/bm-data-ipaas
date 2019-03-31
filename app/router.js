@@ -7,7 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('campus-overview');
+  this.route('campus-overview', function() {
+    this.route('ksf-diag');
+  });
   this.route('dashboard');
   this.route('data-platform', function() {});
   this.route('growth-application', function() {});
