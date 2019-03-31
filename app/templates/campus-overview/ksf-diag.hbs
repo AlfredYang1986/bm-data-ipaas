@@ -1,0 +1,23 @@
+{{#bp-layout direction="col" classNames="ksf-diag-container"}}
+    {{#bp-layout direction="row" main="between" classNames="top-btn-group-outer"}}
+        <p></p>
+        {{#bp-button-group
+            value=switchValue 
+            type="radio" 
+            onChange=(action (mut switchValue)) as |bg|}}
+            {{#bg.button type="default" value=0}}管理层{{/bg.button}}
+            {{#bg.button type="default" value=1}}销售团队{{/bg.button}}
+            {{#bg.button type="default" value=2}}教学团队{{/bg.button}}
+            {{#bg.button type="default" value=3}}市场部门{{/bg.button}}
+        {{/bp-button-group}}
+        {{#bp-button type='primary'}}KSF设置{{/bp-button}}
+    {{/bp-layout}}
+    {{#bp-layout direction="row" classNames="main-content-outer"}}
+        {{#bp-layout direction="col" classNames="member-list-area bg-white"}}
+            121212
+        {{/bp-layout}}
+        {{#bp-layout direction="col" classNames="ksf-detail-container"}}
+            {{outlet}}
+        {{/bp-layout}}
+    {{/bp-layout}}
+{{/bp-layout}}

@@ -34,69 +34,35 @@
 			{{/bp-progress}}
 		{{/bp-layout}}
 		{{#bp-layout direction="col" main="between" classNames="team bg-white p-4"}}
-			<p class="mb-3">团队人数</p>
-			<p class="mb-3">66<span>人</span> </p>
-			<p><span>同比</span><span>20%</span></p>
+			<p class="mb-3 team-left">团队人数</p>
+			<p class="mb-3 team-left">66<span>人</span> </p>
+			<p class="team-left"><span>同比</span><span>20%</span></p>
 		{{/bp-layout}}
 	{{/bp-layout}}
-	{{!-- {{#bp-layout direction='col' classNames='overview-area'}}
-		{{bp-page-header/only-title-desc title="五道口校区概况"}}
-		{{#bp-layout direction='row'}}
-			{{#bp-layout direction='col' main='between' cross='center' classNames='section-with-title section-right-margin section-height-first section-area-top'}}
-				<p class="section-secondary-title">校区总收入</p>
-				<p class="text-maximum">¥ 39,760,000</p>
-			{{/bp-layout}}
-			{{#bp-layout direction='row' main='center' cross='center' classNames='section-with-title section-height-first section-area-top'}}
-				{{#bp-layout direction='col' cross='center' classNames='section-in-three'}}
-					<p class="section-secondary-title text-bottom">签单课时</p>
-					<p class="text-red">53,708<span class="text-minimum">小时</span></p>
-				{{/bp-layout}}
-				{{#bp-layout direction='col' cross='center' classNames='section-in-three section-center-border '}}
-					<p class="section-secondary-title text-bottom">总消课时</p>
-					<p class="text-green">53,708<span class="text-minimum">小时</span></p>
-				{{/bp-layout}}
-				{{#bp-layout direction='col' cross='center' classNames='section-in-three'}}
-					<p class="section-secondary-title text-bottom">其他收益</p>
-					<p class="section-number-small">¥1,000,000</p>
-				{{/bp-layout}}
-			{{/bp-layout}}
-		{{/bp-layout}}
-		{{#bp-layout direction='row'}}
-			{{#bp-layout direction='col' main='between' classNames='section-area-top section-harf-white section-right-margin section-height-second'}}
-				<p class="section-secondary-title">在校学生/总服务学生</p>
-				<p class="section-number-large">660/10,000 <span class="text-minimum">人</span></p>
-				{{#bp-progress classNames='progress' as |p|}}
-					{{p.bar value=660 minValue=0 maxValue=10000}}
-				{{/bp-progress}}
-			{{/bp-layout}}
-			{{#bp-layout direction='col' main='between' classNames='section-area-top section-harf-white section-height-second'}}
-				<p class="section-secondary-title team-left">团队人数</p>
-				<p class="section-number-large team-left">98 <span class="text-minimum">人</span></p>
-				{{#bp-layout direction='row' classNames='team-left'}}
-					<p class="text-minimum">同比</p>
-					<p class="text-minimum text-color-green">20%</p>
-					<span></span>
-				{{/bp-layout}}
-			{{/bp-layout}}
-		{{/bp-layout}}
-	{{/bp-layout}} --}}
 	{{#bp-layout direction='col' classNames='tabs-area'}}
 		{{#bp-tabs selection=selected as |tabs|}}
 			{{#tabs.tablist as |list|}}
 				<li class="nav-item">
-					{{#list.tab
+					{{!-- {{#list.tab
             selectPaneId='business'
             onSelect=(action (mut selected))}}经营指数
-					{{/list.tab}}
+					{{/list.tab}} --}}
+					{{#list.link-to 'campus-overview.index' classNames='nav-link'}}
+						经营指数
+					{{/list.link-to}}
 				</li>
 				<li class="nav-item">
-					{{#list.tab
+					{{!-- {{#list.tab
             selectPaneId='ksf'
             onSelect=(action (mut selected))}}团队KSF诊断
-					{{/list.tab}}
+					{{/list.tab}} --}}
+					{{#list.link-to 'campus-overview.ksf-diag' classNames='nav-link'}}
+						团队KSF诊断
+					{{/list.link-to}}
 				</li>
 			{{/tabs.tablist}}
-			<div class="tab-content">
+			{{outlet}}
+			{{!-- <div class="tab-content">
 				{{#tabs.pane elementId="business"}}
 					{{#bp-layout direction='col' classNames='section-with-title section-height-second section-top'}}
 						{{#bp-layout direction='col'}}
@@ -190,24 +156,6 @@
 										{{/bp-layout}}
 									{{/bp-layout}}
 								{{/each}}
-								{{!-- {{#bp-layout direction='row' main='center' cross='center' classNames='eff-list'}}
-                                    {{#bp-layout direction='row' classNames='circle-progress'}}
-                                        {{bp-circle circleData=circleDataActual circleColor=circleColor widthSize="auto"}}
-                                    {{/bp-layout}}
-                                    {{#bp-layout direction='col'}}
-                                        <p class="text-minimum text-bottom">实到率</p>
-                                        <p class="section-number-small">80%</p>
-                                    {{/bp-layout}}
-                                {{/bp-layout}}
-                                {{#bp-layout direction='row' main='center' cross='center' classNames='eff-list'}}
-                                    {{#bp-layout direction='row' classNames='circle-progress'}}
-                                        {{bp-circle circleData=circleDataActual circleColor=circleColor widthSize="auto"}}
-                                    {{/bp-layout}}
-                                    {{#bp-layout direction='col'}}
-                                        <p class="text-minimum text-bottom">签单率</p>
-                                        <p class="section-number-small">90%</p>
-                                    {{/bp-layout}}
-                                {{/bp-layout}} --}}
 							{{/bp-layout}}
 						{{/bp-layout}}
 						{{#bp-layout direction='col' classNames='section-with-title section-right-margin section-height-forth section-area-top'}}
@@ -271,10 +219,10 @@
 					{{/bp-layout}}
 				{{/tabs.pane}}
 				{{#tabs.pane elementId="ksf"}}
-					2222
+					{{outlet}}
 				{{/tabs.pane}}
-			</div>
+			</div> --}}
 		{{/bp-tabs}}
 	{{/bp-layout}}
 {{/bp-layout}}
-{{outlet}}
+{{!-- {{outlet}} --}}

@@ -1,0 +1,154 @@
+{{#bp-layout direction='col' classNames='section-with-title section-height-second section-top'}}
+    {{#bp-layout direction='col'}}
+        {{#bp-layout direction='row'}}
+            <p class="section-primary-title">校区运营</p>
+        {{/bp-layout}}
+        {{#bp-layout direction='row' main='between' classNames='campus-area'}}
+            {{#bp-layout direction='col' cross='center' main='center' classNames='campus-list'}}
+                <div>
+                    <p class="section-secondary-title">开班数/满班数</p>
+                    <p class="section-top section-number-medium">10/20</p>
+                </div>
+            {{/bp-layout}}
+            {{#bp-layout direction='col' cross='center' main='center' classNames='campus-list'}}
+                <div>
+                    <p class="section-secondary-title">总续费率</p>
+                    <p class="section-top section-number-medium">40%</p>
+                </div>
+            {{/bp-layout}}
+            {{#bp-layout direction='col' cross='center' main='center' classNames='campus-list'}}
+                <div>
+                    <p class="section-secondary-title">总转介绍</p>
+                    <p class="section-top section-number-medium">80<span class="text-minimum">个</span></p>
+                </div>
+            {{/bp-layout}}
+        {{/bp-layout}}
+    {{/bp-layout}}
+{{/bp-layout}}
+{{#bp-layout direction='row'}}
+    {{#bp-layout direction='col' classNames='section-with-title section-right-margin section-height-third section-area-top'}}
+        {{#bp-layout direction='row'}}
+            <p class="section-primary-title">市场有效性</p>
+        {{/bp-layout}}
+        {{#bp-layout direction='col' main='between' classNames='market-area'}}
+            {{#bp-layout direction='row'}}
+                <p class="list-title">市场总投入</p>
+                <p class="section-secondary-title">¥9,878</p>
+            {{/bp-layout}}
+            {{#bp-layout direction='row'}}
+                <p class="list-title">总实到/总诺到人数</p>
+                <p class="section-secondary-title">320/400人</p>
+            {{/bp-layout}}
+            {{#bp-layout direction='row'}}
+                <p class="list-title">总拉访实到人数</p>
+                <p class="section-secondary-title">1,342人</p>
+            {{/bp-layout}}
+            {{#bp-layout direction='row'}}
+                <p class="list-title">转化率</p>
+                <p class="section-secondary-title">15%</p>
+            {{/bp-layout}}
+        {{/bp-layout}}
+    {{/bp-layout}}
+    {{#bp-layout direction='col' classNames='section-with-title section-right-margin section-height-third section-area-top'}}
+        {{#bp-layout direction='row' main='between'}}
+            <p class="section-primary-title">营销日历</p>
+            {{#link-to 'page-not-found' classNames='link-text'}}详情{{/link-to}}
+        {{/bp-layout}}
+        {{#bp-layout direction='row' cross='center' classNames='calendar-area'}}
+            <div class="calendar">
+            </div>
+            {{#bp-layout direction='col' cross='center'}}
+                {{#bp-layout direction='row' cross='center' classNames='list-bottom'}}
+                    <span class="blue-dot"></span>
+                    <p class="list-title">正在进行</p>
+                    <p class="sectio-number-medium">5</p>
+                {{/bp-layout}}
+                {{#bp-layout direction='row' cross='center'}}
+                    <span class="green-dot"></span>
+                    <p class="list-title">即将进行</p>
+                    <p class="sectio-number-medium">8</p>
+                {{/bp-layout}}
+            {{/bp-layout}}
+        {{/bp-layout}}
+    {{/bp-layout}}
+{{/bp-layout}}
+{{#bp-layout direction='row'}}
+    {{#bp-layout direction='col' classNames='section-with-title section-right-margin section-height-forth section-area-top'}}
+        {{#bp-layout direction='row' main='between'}}
+            <p class="section-primary-title">营销效率</p>
+        {{/bp-layout}}
+        {{#bp-layout direction='row' main='center' cross='center' classNames='efficiency-area'}}
+            {{#each model.markering as |mk|}}
+                {{#bp-layout direction='row' main='between' cross='center' classNames='eff-list p-4'}}
+                    {{bp-circle
+                        circleData=mk.circleData
+                        circleColor=model.circleColor
+                        }}
+                    {{#bp-layout direction='col' classNames='circle-desc'}}
+                        <p class="text-minimum text-bottom">{{mk.name}}</p>
+                        <p class="section-number-small">{{mk.rate}}</p>
+                    {{/bp-layout}}
+                {{/bp-layout}}
+            {{/each}}
+        {{/bp-layout}}
+    {{/bp-layout}}
+    {{#bp-layout direction='col' classNames='section-with-title section-right-margin section-height-forth section-area-top'}}
+        {{#bp-layout direction='row' main='between'}}
+            <p class="section-primary-title">客户名单</p>
+            {{#link-to 'page-not-found' classNames='link-text'}}详情{{/link-to}}
+        {{/bp-layout}}
+        {{#bp-layout direction='row' mian='between' classNames='client-area'}}
+            {{#bp-layout direction='col' main='center' cross='center' classNames='client-list'}}
+                <p class="text-minimum text-bottom">当前客户数量</p>
+                <p class="section-number-small">1,000</p>
+            {{/bp-layout}}
+            {{#bp-layout direction='col' main='center' cross='center'  classNames='client-list'}}
+                <p class="text-minimum text-bottom">新消息数</p>
+                <p class="section-number-small">55</p>
+            {{/bp-layout}}
+        {{/bp-layout}}
+    {{/bp-layout}}
+{{/bp-layout}}
+{{#bp-layout direction='row'}}
+    {{#bp-layout direction='col' classNames='section-with-title section-right-margin section-height-fifth section-area-top'}}
+        {{#bp-layout direction='row' main='between'}}
+            <p class="section-primary-title">师训监控</p>
+            {{#link-to 'page-not-found' classNames='link-text'}}详情{{/link-to}}
+        {{/bp-layout}}
+        {{#bp-layout direction='row' mian='between' classNames='tech-area'}}
+            {{#bp-layout direction='col' main='center' cross='center' classNames='texh-list'}}
+                <p class="section-number-medium text-bottom">10</p>
+                <p class="section-secondary-title">平均参与班级数</p>
+            {{/bp-layout}}
+            {{#bp-layout direction='col' main='center' cross='center' classNames='texh-list'}}
+                <p class="section-number-medium text-bottom">10</p>
+                <p class="section-secondary-title">平均授课数量</p>
+            {{/bp-layout}}
+            {{#bp-layout direction='col' main='center' cross='center' classNames='texh-list'}}
+                <p class="section-number-medium text-bottom">45%</p>
+                <p class="section-secondary-title">客户续费率</p>
+            {{/bp-layout}}
+            {{#bp-layout direction='col' main='center' cross='center' classNames='texh-list'}}
+                <p class="section-number-medium text-bottom">98%</p>
+                <p class="section-secondary-title">消课率</p>
+            {{/bp-layout}}
+            {{#bp-layout direction='col' main='center' cross='center' classNames='texh-list'}}
+                <p class="section-number-medium text-bottom">100%</p>
+                <p class="section-secondary-title">内训完成度</p>
+            {{/bp-layout}}
+        {{/bp-layout}}
+    {{/bp-layout}}
+    {{#bp-layout direction='col' classNames='section-with-title section-right-margin section-height-fifth section-area-top'}}
+        {{#bp-layout direction='row' main='between'}}
+            <p class="section-primary-title">学情监控</p>
+            {{#link-to 'page-not-found' classNames='link-text'}}详情{{/link-to}}
+        {{/bp-layout}}
+        {{#bp-layout direction='row' mian='center' classNames='stud-area'}}
+            {{#bp-layout direction='col' main='center' cross='center' classNames='stud-list'}}
+                <p class="section-number-medium text-bottom">1,000</p>
+                <p class="section-secondary-title">在籍学员人数</p>
+            {{/bp-layout}}
+        {{/bp-layout}}
+    {{/bp-layout}}
+{{/bp-layout}}
+{{outlet}}
