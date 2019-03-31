@@ -10,6 +10,7 @@
         .member-list-area {
             width: 300px;
             margin-right: $spacing;
+            height: fit-content;
 
             .member-list-title {
                 padding: $spacing*2 $spacing*3;

@@ -2,7 +2,17 @@ import Component from '@ember/component';
 import { computed } from '@ember/object';
 
 export default Component.extend({
-    tagName: '',
+	// tagName: '',
+	classNames: ['member-list-item'],
+	attributeBindings: ['style'],
+    style: computed('active', function(){
+		let { active } = this.getProperties('active');
+		if (active === true) {
+			return 'background-color: #f5f6f8';
+		} else {
+			return "";
+		}
+    }),
 
     /**
 	 * 名称
@@ -81,7 +91,15 @@ export default Component.extend({
 	 * @default '' // should be a loading img resoure
 	 * @public
 	 */
-    imgSrc: '',
+	imgSrc: '',
+	/**
+	 * img src
+	 * @property active
+	 * @type {boolean}
+	 * @default false
+	 * @public
+	 */
+    active: false,
 
     /**
 	 * @property memberOnclick
