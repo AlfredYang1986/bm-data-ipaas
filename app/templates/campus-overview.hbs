@@ -140,15 +140,15 @@
 							{{#bp-layout direction='row' main='between'}}
 								<p class="section-primary-title">营销效率</p>
 							{{/bp-layout}}
-							{{#bp-layout direction='row' main='between' classNames='efficiency-area'}}
+							{{#bp-layout direction='row' main='center' cross='center' classNames='efficiency-area'}}
 								{{#each model.markering as |mk|}}
-									{{#bp-layout direction='row' main='center' cross='center' classNames='eff-list p-4'}}
+									{{#bp-layout direction='row' main='between' cross='center' classNames='eff-list p-4'}}
 										{{bp-circle
-											circleData=mk.circleData 
-											circleColor=model.circleColor 
+											circleData=mk.circleData
+											circleColor=model.circleColor
 											}}
 										{{#bp-layout direction='col' classNames='circle-desc'}}
-											<p class="text-minimum text-bottom">实到率</p>
+											<p class="text-minimum text-bottom">{{mk.name}}</p>
 											<p class="section-number-small">{{mk.rate}}</p>
 										{{/bp-layout}}
 									{{/bp-layout}}
