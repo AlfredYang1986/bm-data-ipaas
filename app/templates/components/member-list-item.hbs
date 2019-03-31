@@ -3,7 +3,14 @@
     {{#bp-layout direction="row" classNames="member-list-item-left"}}
         <img class="head-icon" src={{imgSrc}}/>
         {{#bp-layout direction="col" classNames="member-list-item-mid"}}
-            <p>{{name}}<span>{{sexType}}</span></p>
+            <p>
+                {{name}}
+                {{#if (eq sex 1)}}
+                    {{bp-icon icon="male"}}
+                {{else}}
+                    {{bp-icon icon="female"}}
+                {{/if}}
+            </p>
             <p>{{contact}}</p>
         {{/bp-layout}}
     {{/bp-layout}}
