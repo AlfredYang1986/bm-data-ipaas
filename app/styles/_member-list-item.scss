@@ -1,4 +1,8 @@
 .member-list-item {
+    border-radius: 4px;
+}
+.member-list-item-container {
+    cursor: pointer;
     padding: $spacing*2 $spacing;
     margin-bottom: $spacing*2;
 
