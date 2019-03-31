@@ -1,8 +1,72 @@
 .edu-container {
+    .text-header-medium {
+        @extend %header-medium;
+    }
+    .text-p-small {
+        @extend %p-small;
+    }
+    .text-header-small {
+        @extend %header-small;
+    }
+    .text-p-primary {
+        @extend %p-primary;
+    }
+    .text-p-secondary {
+        @extend %p-secondary;
+    }
+    .text-header-large {
+        @extend %header-large;
+    }
     .title-area {
-        .title-primary {
-
+        padding: 0 24px;
+        height: 54px;
+    }
+    .tech {
+        flex: 1;
+    }
+    .admin {
+        flex: 1;
+    }
+    .reports {
+        flex: 1;
+    }
+    .satisfaction {
+        flex: 1;
+    }
+    .eff-list {
+		width: 100%;
+        -webkit-box-flex: 1;
+		-webkit-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+        &:not(:first-child) {
+            .circle-desc {
+                padding-left: 48px;
+                border-left: 1px solid rgba(9,30,66,0.08);
+            }
         }
 
-    }
+        .circle-area {
+            width: 100px;
+        }
+		.bp-circle {
+			height: 45px;
+			width: 45px;
+			text-align: center;
+
+			.echarts-chart {
+				margin: 0 auto;
+				width: 45px;
+				height: 45px;
+
+				&~div {
+					width: 45px;
+					height: 45px;
+				}
+			}
+		}
+		.circle-desc {
+			flex: 0 0 38px;
+		}
+	}
 }
