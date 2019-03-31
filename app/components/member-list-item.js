@@ -63,7 +63,7 @@ export default Component.extend({
 		} else if (jobCode === 2) {
 			return "教务经理"
 		} else {
-			return "未知职位"
+			return "团队成员"
 		}
     }),
     /**

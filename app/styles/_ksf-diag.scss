@@ -32,3 +32,75 @@
         }
     }
 }
+.market-department {
+
+    .content-item {
+        flex: 1;
+        margin-right: $spacing;
+        
+        &:nth-last-child(1) {
+            margin-right: 0;
+        }
+        .item-title {
+            @extend %header-small;
+        }
+        
+        .item-content {
+            margin-bottom: $spacing*2;
+            
+            &:nth-last-child(1) {
+                margin-bottom: 0;
+            }
+            .content-label {
+                width: 70px;
+                margin-right: $spacing*2;
+                
+                p {
+                    @extend %p-secondary;
+                }
+            }
+            .content-value {
+                p {
+                    @extend %header-large;
+                }
+                span {
+                    @extend %p-secondary;
+                }
+            }
+            
+        }
+    }
+    .act-target {
+        .content-item {
+            margin-right: 0;
+
+            &:nth-child(1) {
+                .content-label.long {
+                    width: 100px;
+                }
+            }
+            .item-title {
+                height: 20px;
+            }
+            .item-subtitle {
+                p {
+                    @extend %p-primary;
+                }
+            }
+            .item-content {
+
+                .content-value {
+                    p {
+                        @extend %header-medium;
+                    }
+                    span {
+                        @extend %p-small;
+                    }
+                }
+            }
+        }
+    }
+    .business-target {
+
+    }
+}
