@@ -22,6 +22,11 @@
         p:nth-child(1) {
             @extend %header-small;
             margin-bottom: $spacing;
+
+            svg {
+                height: 16px;
+                width: 16px;
+            }
         }
         p:nth-child(2) {
             @extend %p-secondary;
