@@ -11,14 +11,13 @@
 		.circle-contaienr {
 			-webkit-box-flex: 1;
 			-webkit-flex: 1;
-			    -ms-flex: 1;
-			        flex: 1;
-			height: 280px;
+			-ms-flex: 1;
+			flex: 1;
+			min-height: 280px;
 		}
 
 		.line-container {
 			width: 48%;
-
 		}
 	}
 

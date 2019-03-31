@@ -1,0 +1,57 @@
+.total-income,
+.school-cost {
+	div {
+		flex: 1;
+
+		.keys {
+			@extend %p-small;
+		}
+
+		.values {
+			@extend %header-large;
+
+		}
+	}
+}
+
+.school-others {
+	.bg-white {
+		flex: 1;
+
+		.values {
+			@extend %p-primary;
+		}
+
+		.unit {
+			@extend %p-small;
+		}
+
+	}
+}
+
+.checks,
+.reports {
+	.item {
+		flex: 1;
+
+		.keys {
+			@extend %p-primary
+		}
+
+		.values {
+			@extend %p-secondary;
+		}
+	}
+}
+
+// .total-income,
+// .school-cost {
+// 	.keys {
+// 		@extend %p-small;
+// 	}
+
+// 	.values {
+// 		@extend %header-large;
+
+// 	}
+// }
