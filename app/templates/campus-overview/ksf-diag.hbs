@@ -1,83 +1,205 @@
 {{#bp-layout direction="col" classNames="ksf-diag-container"}}
-    {{#bp-layout direction="row" main="between" classNames="top-btn-group-outer"}}
-        <p></p>
-        {{#bp-button-group
+	{{#bp-layout direction="row" main="between" classNames="top-btn-group-outer"}}
+		<p></p>
+		{{#bp-button-group
             value=switchValue 
             type="radio" 
-            onChange=(action "btnGroupChange") as |bg|}}
-            {{#bg.button type="default" value=0}}管理层{{/bg.button}}
-            {{#bg.button type="default" value=1}}销售团队{{/bg.button}}
-            {{#bg.button type="default" value=2}}教学团队{{/bg.button}}
-            {{#bg.button type="default" value=3}}市场部门{{/bg.button}}
-        {{/bp-button-group}}
-        {{#bp-button type='primary'}}KSF设置{{/bp-button}}
-    {{/bp-layout}}
-    {{#if (eq switchValue 0)}}
-        {{#bp-layout direction="row" classNames="main-content-outer"}}
-            {{#bp-layout direction="col" classNames="member-list-area bg-white"}}
-                {{#bp-layout direction="row" cross="center" classNames="member-list-title bg-white"}}
-                    <p class="member-list-type">管理层名单</p>
-                    <p class="member-count">{{memberList.length}}</p>
-                {{/bp-layout}}
-                {{#bp-layout direction="col" classNames="member-list-content bg-white"}}
-                    {{#each memberList as |item|}}
-                        {{#if (eq curSelectId item.id)}}
-                            {{member-list-item name=item.name sex=item.sex contact=item.contact jobCode=item.jobCode imgSrc=item.icon memberOnclick=(action "memberOnclick" item) active=true}}
-                        {{else}}
-                            {{member-list-item name=item.name sex=item.sex contact=item.contact jobCode=item.jobCode imgSrc=item.icon memberOnclick=(action "memberOnclick" item)}}
-                        {{/if}}
-                    {{/each}}
-                {{/bp-layout}}
-            {{/bp-layout}}
-            {{#bp-layout direction="col" classNames="ksf-detail-container"}}
-                {{outlet}}
-            {{/bp-layout}}
-        {{/bp-layout}}
-    {{else if (eq switchValue 1)}}
-        {{#bp-layout direction="row" classNames="main-content-outer"}}
-            {{#bp-layout direction="col" classNames="member-list-area bg-white"}}
-                {{#bp-layout direction="row" cross="center" classNames="member-list-title bg-white"}}
-                    <p class="member-list-type">销售团队</p>
-                    <p class="member-count">{{memberList.length}}</p>
-                {{/bp-layout}}
-                {{#bp-layout direction="col" classNames="member-list-content bg-white"}}
-                    {{#each memberList as |item|}}
-                        {{#if (eq curSelectId item.id)}}
-                            {{member-list-item name=item.name sex=item.sex contact=item.contact jobCode=item.jobCode imgSrc=item.icon memberOnclick=(action "memberOnclick" item) active=true}}
-                        {{else}}
-                            {{member-list-item name=item.name sex=item.sex contact=item.contact jobCode=item.jobCode imgSrc=item.icon memberOnclick=(action "memberOnclick" item)}}
-                        {{/if}}
-                    {{/each}}
-                {{/bp-layout}}
-            {{/bp-layout}}
-            {{#bp-layout direction="col" classNames="ksf-detail-container"}}
-                销售团队页面
-            {{/bp-layout}}
-        {{/bp-layout}}
-    {{else if (eq switchValue 2)}}
-        {{#bp-layout direction="row" classNames="main-content-outer"}}
-            {{#bp-layout direction="col" classNames="member-list-area bg-white"}}
-                {{#bp-layout direction="row" cross="center" classNames="member-list-title bg-white"}}
-                    <p class="member-list-type">教学团队</p>
-                    <p class="member-count">{{memberList.length}}</p>
-                {{/bp-layout}}
-                {{#bp-layout direction="col" classNames="member-list-content bg-white"}}
-                    {{#each memberList as |item|}}
-                        {{#if (eq curSelectId item.id)}}
-                            {{member-list-item name=item.name sex=item.sex contact=item.contact jobCode=item.jobCode imgSrc=item.icon memberOnclick=(action "memberOnclick" item) active=true}}
-                        {{else}}
-                            {{member-list-item name=item.name sex=item.sex contact=item.contact jobCode=item.jobCode imgSrc=item.icon memberOnclick=(action "memberOnclick" item)}}
-                        {{/if}}
-                    {{/each}}
-                {{/bp-layout}}
-            {{/bp-layout}}
-            {{#bp-layout direction="col" classNames="ksf-detail-container"}}
-                教学团队页面
-            {{/bp-layout}}
-        {{/bp-layout}}
-    {{else if (eq switchValue 3)}}
-        市场部门
-        {{!-- {{#bp-layout direction="row" classNames="main-content-outer"}}
+            onChange=(action (mut switchValue)) as |bg|}}
+			{{#bg.button type="default" value=0}}管理层{{/bg.button}}
+			{{#bg.button type="default" value=1}}销售团队{{/bg.button}}
+			{{#bg.button type="default" value=2}}教学团队{{/bg.button}}
+			{{#bg.button type="default" value=3}}市场部门{{/bg.button}}
+		{{/bp-button-group}}
+		{{#bp-button type='primary'}}KSF设置{{/bp-button}}
+	{{/bp-layout}}
+	{{#if (eq switchValue 0)}}
+		{{#bp-layout direction="row" classNames="main-content-outer"}}
+			{{#bp-layout direction="col" classNames="member-list-area bg-white"}}
+				{{#bp-layout direction="row" cross="center" classNames="member-list-title bg-white"}}
+					<p class="member-list-type">管理层名单</p>
+					<p class="member-count">{{memberList.length}}</p>
+				{{/bp-layout}}
+				{{#bp-layout direction="col" classNames="member-list-content bg-white"}}
+					{{#each memberList as |item|}}
+						{{#if (eq curSelectId item.id)}}
+							{{member-list-item name=item.name sex=item.sex contact=item.contact jobCode=item.jobCode imgSrc=item.icon memberOnclick=(action "memberOnclick" item) active=true}}
+						{{else}}
+							{{member-list-item name=item.name sex=item.sex contact=item.contact jobCode=item.jobCode imgSrc=item.icon memberOnclick=(action "memberOnclick" item)}}
+						{{/if}}
+					{{/each}}
+				{{/bp-layout}}
+			{{/bp-layout}}
+			{{#bp-layout direction="col" classNames="ksf-detail-container"}}
+				{{outlet}}
+			{{/bp-layout}}
+		{{/bp-layout}}
+	{{else if (eq switchValue 1)}}
+		{{#bp-layout direction="row" classNames="main-content-outer"}}
+			{{#bp-layout direction="col" classNames="member-list-area bg-white"}}
+				{{#bp-layout direction="row" cross="center" classNames="member-list-title bg-white"}}
+					<p class="member-list-type">销售团队</p>
+					<p class="member-count">{{memberList.length}}</p>
+				{{/bp-layout}}
+				{{#bp-layout direction="col" classNames="member-list-content bg-white"}}
+					{{#each memberList as |item|}}
+						{{#if (eq curSelectId item.id)}}
+							{{member-list-item name=item.name sex=item.sex contact=item.contact jobCode=item.jobCode imgSrc=item.icon memberOnclick=(action "memberOnclick" item) active=true}}
+						{{else}}
+							{{member-list-item name=item.name sex=item.sex contact=item.contact jobCode=item.jobCode imgSrc=item.icon memberOnclick=(action "memberOnclick" item)}}
+						{{/if}}
+					{{/each}}
+				{{/bp-layout}}
+			{{/bp-layout}}
+			{{#bp-layout direction="col" classNames="ksf-detail-container p-4"}}
+				{{#bp-layout tagName="h2" main="between" cross="center"
+	classNames="px-4 mb-2 bg-white title"}}
+					<p class="title">业务目标</p>
+					<span class="subtitle">单位时间 月</span>
+				{{/bp-layout}}
+				{{#bp-layout direction='col' classNames="mb-4 p-4 bg-white"}}
+					{{#bp-layout main="between" cross="center" 
+		classNames="business-target mb-4"}}
+						{{#bp-layout main="center" classNames="gauge-container"}}
+							{{bp-gauge value=88 maxValue=100}}
+						{{/bp-layout}}
+						{{#bp-layout classNames="p-4"}}
+							{{#bp-layout direction="col"}}
+								<p class="keys mb-4">个人销售指标</p>
+								<p class="keys">个人销售总达成{{bp-icon icon="info" size="small"}}</p>
+							{{/bp-layout}}
+							{{#bp-layout direction="col"}}
+								<p class="values mb-4 ml-4">¥ 9,000,000</p>
+								<p class="values ml-4">60 <span class="unit">个</span></p>
+							{{/bp-layout}}
+						{{/bp-layout}}
+					{{/bp-layout}}
+					{{#bp-layout main="between" classNames="business-infos"}}
+						{{#bp-layout direction="col" main="between" classNames="border-right"}}
+							<p class="keys mb-3">个人新增签单额</p>
+							<p class="values">￥45017</p>
+						{{/bp-layout}}
+						{{#bp-layout direction="col" main="between"}}
+							<p class="keys mb-3">个人续费额 {{bp-icon icon="info"}}</p>
+							<p class="values">￥45017</p>
+						{{/bp-layout}}
+					{{/bp-layout}}
+				{{/bp-layout}}
+				{{#bp-layout tagName="h2" main="between" cross="center"
+	classNames="px-4 mb-2 bg-white title"}}
+					<p class="title">行为指标</p>
+					<span class="subtitle">单位时间 -</span>
+				{{/bp-layout}}
+				{{#bp-layout direction="col" main="between" 
+	classNames="behavioral-indicator  mb-4 p-4 bg-white"}}
+					{{#bp-layout main="between" classNames="titles mb-4"}}
+						<h3 class="title"><span class="title">电话拜访</span></h3>
+					{{/bp-layout}}
+					{{#bp-layout main="between" classNames="contents"}}
+						{{#bp-layout direction="col" classNames="content px-4 pb-4 border-right"}}
+							<p class="keys mb-2">个人指标
+							</p>
+							<p class="values mb-4">199 <span class="unti">个</span></p>
+							<p class="keys mb-2">个人达成
+								{{bp-icon icon="info" size="small"}}</p>
+							<p class="values">899 <span class="unti">个</span></p>
+						{{/bp-layout}}
+						{{#bp-layout cross="center" classNames="customers p-4"}}
+							{{#bp-layout direction="col" classNames="mr-3"}}
+								<p class="keys mb-3">诺访客户数
+									{{bp-icon icon="info" size="small"}}</p>
+								<p class="keys mb-3">实到客户数
+									{{bp-icon icon="info" size="small"}}</p>
+								<p class="keys">有效通话时长
+									{{bp-icon icon="info" size="small"}}</p>
+							{{/bp-layout}}
+							{{#bp-layout direction="col"}}
+								<p class="values mb-3">9,999 <span class="unit">个</span></p>
+								<p class="values mb-3">299 <span class="unit">个</span></p>
+								<p class="values">299<span class="unit">s</span>/400 <span class="unit">通</span></p>
+							{{/bp-layout}}
+						{{/bp-layout}}
+					{{/bp-layout}}
+				{{/bp-layout}}
+				{{#bp-layout tagName="h2" main="between" cross="center"
+	classNames="px-4 mb-2 bg-white title"}}
+					<p class="title">行政</p>
+				{{/bp-layout}}
+				{{#bp-layout main="between"
+	classNames="administrative mb-4"}}
+					{{#bp-layout direction="col" 
+		classNames="training mr-2 p-4 bg-white"}}
+						{{#bp-layout tagName="h3" classNames="title"}}
+							<span class="title">内训考核</span>
+						{{/bp-layout}}
+						{{#bp-layout classNames="pt-4"}}
+							{{#bp-layout direction="col" classNames="keys"}}
+								<p class="mb-3">指标次数{{bp-icon icon="info" size="small"}}</p>
+								<p class="mb-3">完成次数{{bp-icon icon="info" size="small"}}</p>
+							{{/bp-layout}}
+							{{#bp-layout direction="col" classNames="values ml-3"}}
+								<p class="mb-3 ">6次</p>
+								<p class="mb-3 ">8次</p>
+							{{/bp-layout}}
+						{{/bp-layout}}
+					{{/bp-layout}}
+					{{#bp-layout direction="col" mian="between" 
+		classNames="leave p-4 bg-white"}}
+						{{#bp-layout tagName="h3" classNames="title"}}
+							<span class="title"></span>
+						{{/bp-layout}}
+						{{#bp-layout tagName="p" main="center" cross="center"}}
+							<p>分数
+								{{bp-icon icon="info" size="small"}}
+								<span class="values ml-4">80</span>
+								<span class="unit">分</span>
+							</p>
+						{{/bp-layout}}
+					{{/bp-layout}}
+				{{/bp-layout}}
+				{{#bp-layout direction="col" classNames="bg-white"}}
+					{{#bp-layout tagName="h2" main="between" cross="center"
+	classNames="px-4 title"}}
+						<p class="title">满意度</p>
+					{{/bp-layout}}
+					{{#bp-layout classNames="satisfaction"}}
+						{{#bp-layout direction="col" main="between"
+		classNames="p-4"}}
+							<p class="keys mb-2 text-center">退费率</p>
+							<p class="values text-center">20%</p>
+						{{/bp-layout}}
+						{{#bp-layout direction="col" main="between"
+		classNames="p-4"}}
+							<p class="keys mb-2 text-center">客诉率</p>
+							<p class="values text-center">10%</p>
+						{{/bp-layout}}
+					{{/bp-layout}}
+				{{/bp-layout}}
+			{{/bp-layout}}
+		{{/bp-layout}}
+	{{else if (eq switchValue 2)}}
+		{{#bp-layout direction="row" classNames="main-content-outer"}}
+			{{#bp-layout direction="col" classNames="member-list-area bg-white"}}
+				{{#bp-layout direction="row" cross="center" classNames="member-list-title bg-white"}}
+					<p class="member-list-type">教学团队</p>
+					<p class="member-count">{{memberList.length}}</p>
+				{{/bp-layout}}
+				{{#bp-layout direction="col" classNames="member-list-content bg-white"}}
+					{{#each memberList as |item|}}
+						{{#if (eq curSelectId item.id)}}
+							{{member-list-item name=item.name sex=item.sex contact=item.contact jobCode=item.jobCode imgSrc=item.icon memberOnclick=(action "memberOnclick" item) active=true}}
+						{{else}}
+							{{member-list-item name=item.name sex=item.sex contact=item.contact jobCode=item.jobCode imgSrc=item.icon memberOnclick=(action "memberOnclick" item)}}
+						{{/if}}
+					{{/each}}
+				{{/bp-layout}}
+			{{/bp-layout}}
+			{{#bp-layout direction="col" classNames="ksf-detail-container"}}
+				教学团队页面
+			{{/bp-layout}}
+		{{/bp-layout}}
+	{{else if (eq switchValue 3)}}
+		市场部门
+		{{!-- {{#bp-layout direction="row" classNames="main-content-outer"}}
             {{#bp-layout direction="col" classNames="member-list-area bg-white"}}
                 {{#bp-layout direction="row" cross="center" classNames="member-list-title bg-white"}}
                     <p class="member-list-type">市场部门</p>
@@ -93,5 +215,5 @@
                 {{outlet}}
             {{/bp-layout}}
         {{/bp-layout}} --}}
-    {{/if}}
+	{{/if}}
 {{/bp-layout}}
