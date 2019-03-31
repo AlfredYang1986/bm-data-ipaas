@@ -1,0 +1,18 @@
+.ksf-diag-container {
+    padding-top: $spacing*3;
+
+    .top-btn-group-outer {
+
+    }
+    .main-content-outer {
+        width: 100%;
+
+        .member-list-area {
+            width: 300px;
+            margin-right: $spacing;
+        }
+        .ksf-detail-container {
+            flex: 1;
+        }
+    }
+}

@@ -43,19 +43,26 @@
 		{{#bp-tabs selection=selected as |tabs|}}
 			{{#tabs.tablist as |list|}}
 				<li class="nav-item">
-					{{#list.tab
+					{{!-- {{#list.tab
             selectPaneId='business'
             onSelect=(action (mut selected))}}经营指数
-					{{/list.tab}}
+					{{/list.tab}} --}}
+					{{#list.link-to 'campus-overview.index' classNames='nav-link'}}
+						经营指数
+					{{/list.link-to}}
 				</li>
 				<li class="nav-item">
-					{{#list.tab
+					{{!-- {{#list.tab
             selectPaneId='ksf'
             onSelect=(action (mut selected))}}团队KSF诊断
-					{{/list.tab}}
+					{{/list.tab}} --}}
+					{{#list.link-to 'campus-overview.ksf-diag' classNames='nav-link'}}
+						团队KSF诊断
+					{{/list.link-to}}
 				</li>
 			{{/tabs.tablist}}
-			<div class="tab-content">
+			{{outlet}}
+			{{!-- <div class="tab-content">
 				{{#tabs.pane elementId="business"}}
 					{{#bp-layout direction='col' classNames='section-with-title section-height-second section-top'}}
 						{{#bp-layout direction='col'}}
@@ -149,24 +156,6 @@
 										{{/bp-layout}}
 									{{/bp-layout}}
 								{{/each}}
-								{{!-- {{#bp-layout direction='row' main='center' cross='center' classNames='eff-list'}}
-                                    {{#bp-layout direction='row' classNames='circle-progress'}}
-                                        {{bp-circle circleData=circleDataActual circleColor=circleColor widthSize="auto"}}
-                                    {{/bp-layout}}
-                                    {{#bp-layout direction='col'}}
-                                        <p class="text-minimum text-bottom">实到率</p>
-                                        <p class="section-number-small">80%</p>
-                                    {{/bp-layout}}
-                                {{/bp-layout}}
-                                {{#bp-layout direction='row' main='center' cross='center' classNames='eff-list'}}
-                                    {{#bp-layout direction='row' classNames='circle-progress'}}
-                                        {{bp-circle circleData=circleDataActual circleColor=circleColor widthSize="auto"}}
-                                    {{/bp-layout}}
-                                    {{#bp-layout direction='col'}}
-                                        <p class="text-minimum text-bottom">签单率</p>
-                                        <p class="section-number-small">90%</p>
-                                    {{/bp-layout}}
-                                {{/bp-layout}} --}}
 							{{/bp-layout}}
 						{{/bp-layout}}
 						{{#bp-layout direction='col' classNames='section-with-title section-right-margin section-height-forth section-area-top'}}
@@ -230,10 +219,10 @@
 					{{/bp-layout}}
 				{{/tabs.pane}}
 				{{#tabs.pane elementId="ksf"}}
-					2222
+					{{outlet}}
 				{{/tabs.pane}}
-			</div>
+			</div> --}}
 		{{/bp-tabs}}
 	{{/bp-layout}}
 {{/bp-layout}}
-{{outlet}}
+{{!-- {{outlet}} --}}

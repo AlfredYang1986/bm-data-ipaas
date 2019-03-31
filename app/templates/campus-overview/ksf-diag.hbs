@@ -1,1 +1,12 @@
-{{outlet}}
+{{#bp-layout direction="col" classNames="ksf-diag-container"}}
+    {{#bp-layout direction="row" classNames="top-btn-group-outer"}}
+    {{/bp-layout}}
+    {{#bp-layout direction="row" classNames="main-content-outer"}}
+        {{#bp-layout direction="col" classNames="member-list-area bg-white"}}
+            121212
+        {{/bp-layout}}
+        {{#bp-layout direction="col" classNames="ksf-detail-container"}}
+            {{outlet}}
+        {{/bp-layout}}
+    {{/bp-layout}}
+{{/bp-layout}}
