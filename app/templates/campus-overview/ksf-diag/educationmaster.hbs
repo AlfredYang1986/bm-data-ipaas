@@ -8,7 +8,10 @@
             {{#each model.goal as |ga|}}
                 {{#bp-layout direction='row' main='between' cross='center' classNames='eff-list p-4'}}
                     {{#bp-layout direction='col' classNames='circle-desc'}}
-                        <p class="text-p-small mb-2">{{ga.name}}</p>
+                        {{#bp-layout direction='row' cross='center'}}
+                            <p class="text-p-small mb-2">{{ga.name}}</p>
+                            <img src={{ga.icon}} alt="" class="icon-info">
+                        {{/bp-layout}}
                         <p class="text-header-large">{{ga.rate}}%</p>
                     {{/bp-layout}}
 
@@ -32,7 +35,10 @@
             {{#bp-layout direction='row' main='between'}}
                 {{#each model.behavior as |bh|}}
                     {{#bp-layout direction='col' cross='center' class='tech'}}
-                        <p class="text-p-small mb-2">{{bh.name}}</p>
+                        {{#bp-layout direction='row' cross='center'}}
+                            <p class="text-p-small mb-2">{{bh.name}}</p>
+                            <img src={{bh.icon}} alt="" class="icon-info">
+                        {{/bp-layout}}
                         <p class="text-header-small">{{bh.rate}}{{bh.unit}}</p>
                     {{/bp-layout}}
                 {{/each}}
@@ -66,21 +72,30 @@
             {{#bp-layout direction='row'}}
                 {{#bp-layout direction='col' classNames='reports'}}
                     {{#bp-layout direction='row'}}
-                        <p class="text-p-primary mb-3 mr-4">报表数量</p>
+                        <p class="text-p-primary mb-3 mr-4 text-width">报表数量</p>
                         <p class="text-p-secondary">40份</p>
                     {{/bp-layout}}
                     {{#bp-layout direction='row'}}
-                        <p class="text-p-primary mr-4">提交次数</p>
+                        {{#bp-layout direction='row' cross='center' classNames='mr-4'}}
+                            <p class="text-p-primary mb-3 mr-1">提交次数</p>
+                            <img src={{model.iconInfo}} alt="" class="icon-info mb-3">
+                        {{/bp-layout}}
                         <p class="text-p-secondary">40次</p>
                     {{/bp-layout}}
                 {{/bp-layout}}
                 {{#bp-layout direction='col' classNames='reports'}}
                     {{#bp-layout direction='row'}}
-                        <p class="text-p-primary mb-3 mr-4 pl-4">提交及时率</p>
+                        {{#bp-layout direction='row' cross='center' classNames='mr-4'}}
+                            <p class="text-p-primary mb-3 mr-1 pl-4">提交及时率</p>
+                            <img src={{model.iconInfo}} alt="" class="icon-info mb-3">
+                        {{/bp-layout}}
                         <p class="text-p-secondary mr-4">80%</p>
                     {{/bp-layout}}
                     {{#bp-layout direction='row'}}
-                        <p class="text-p-primary mb-3 mr-4 pl-4">提交准确率</p>
+                        {{#bp-layout direction='row' cross='center' classNames='mr-4'}}
+                            <p class="text-p-primary mb-3 mr-1 pl-4">提交准确率</p>
+                            <img src={{model.iconInfo}} alt="" class="icon-info mb-3">
+                        {{/bp-layout}}
                         <p class="text-p-secondary mr-4">90%</p>
                     {{/bp-layout}}
                 {{/bp-layout}}

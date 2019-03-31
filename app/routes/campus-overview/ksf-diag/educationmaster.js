@@ -4,6 +4,7 @@ import {A} from '@ember/array';
 export default Route.extend({
     model() {
         return {
+            iconInfo: '../../images/icon_info-s@3x.png',
             goal: A([{
                 rate: 50,
                 name: '消课率',
@@ -15,6 +16,7 @@ export default Route.extend({
             },{
                 rate: 10,
                 name: '续费率',
+                icon: '../../images/icon_info-s@3x.png',
                 circleColor: A(['#FFAB00', '#F4F5F7']),
                 circleData:A([
                     { value: 0.1, name: '已续费' },
@@ -40,7 +42,8 @@ export default Route.extend({
             },{
                 rate: 20,
                 name: '及时率',
-                unit: '%'
+                unit: '%',
+                icon: '../../images/icon_info-s@3x.png',
             },{
                 rate: 20,
                 name: '准确率',

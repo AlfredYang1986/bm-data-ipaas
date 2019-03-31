@@ -33,14 +33,26 @@
     .satisfaction {
         flex: 1;
     }
+    .icon-info {
+        margin-bottom: 11px;
+        // width: 16px;
+        height: 16px;
+    }
+    .text-width {
+        min-width: 76px;
+    }
     .eff-list {
 		width: 100%;
         -webkit-box-flex: 1;
 		-webkit-flex: 1;
 		-ms-flex: 1;
 		flex: 1;
+        .circle-desc {
+            min-width: 60px;
+        }
         &:not(:first-child) {
             .circle-desc {
+                min-width: 110px;
                 padding-left: 48px;
                 border-left: 1px solid rgba(9,30,66,0.08);
             }
