@@ -1,0 +1,13 @@
+{{yield}}
+{{#bp-layout direction="row" main="between" classNames="member-list-item" click=(action "onItemClick")}}
+    {{#bp-layout direction="row" classNames="member-list-item-left"}}
+        <img class="head-icon" src={{imgSrc}}/>
+        {{#bp-layout direction="col" classNames="member-list-item-mid"}}
+            <p>{{name}}<span>{{sexType}}</span></p>
+            <p>{{contact}}</p>
+        {{/bp-layout}}
+    {{/bp-layout}}
+    {{#bp-layout direction="row" main="end" cross="center" classNames="member-list-item-right"}}
+        <p class="tag">{{jobName}}</p>
+    {{/bp-layout}}
+{{/bp-layout}}
