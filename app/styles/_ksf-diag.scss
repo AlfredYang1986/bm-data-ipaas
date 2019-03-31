@@ -10,6 +10,21 @@
         .member-list-area {
             width: 300px;
             margin-right: $spacing;
+
+            .member-list-title {
+                padding: $spacing*2 $spacing*3;
+
+                .member-list-type {
+                    @extend %header-medium;
+                }
+                .member-count {
+                    @extend %p-small;
+                    margin-left: $spacing;
+                }
+            }
+            .member-list-content {
+                padding: $spacing*3;
+            }
         }
         .ksf-detail-container {
             flex: 1;
