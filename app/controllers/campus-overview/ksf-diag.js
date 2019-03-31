@@ -54,6 +54,11 @@ export default Controller.extend({
             } else {
                 return;
             }
-        }
+        },
+        btnGroupChange(param) {
+            if (param == 0) {
+                this.transitionToRoute("campus-overview.ksf-diag.index")
+            }
+        },
     },
 });
