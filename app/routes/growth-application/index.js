@@ -165,7 +165,6 @@ export default Route.extend({
 				left: 'center',
 				top: ''
 			},
-
 			distributionContents: A([
 				{
 					name: '龙民节小教具', type: 0, price: 200,
