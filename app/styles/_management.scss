@@ -1,0 +1,119 @@
+// sale Master
+.business-target {
+	&>div {
+		flex: 1;
+	}
+
+	div.gauge-container {
+		height: 90px;
+		overflow: hidden;
+	}
+
+	.keys {
+		@extend %p-secondary;
+		line-height: 28px;
+	}
+
+	.values {
+		@extend %header-large;
+	}
+}
+
+.business-infos {
+	div {
+		flex: 1;
+	}
+
+	.keys {
+		@extend %p-small;
+		text-align: center;
+	}
+
+	.values {
+		@extend %header-medium;
+		text-align: center;
+
+	}
+}
+
+.behavioral-indicator {
+	.titles {
+		h3 {
+			flex: 1;
+		}
+	}
+
+
+	.contents {
+		.keys {
+			@extend %p-secondary;
+		}
+
+		.unit {
+			@extend %p-small;
+		}
+
+		.content,
+		.customers {
+			flex: 1;
+		}
+
+		.content {
+			.values {
+				@extend %header-large;
+
+				.unit {
+					@extend %p-small;
+				}
+			}
+		}
+
+		.customers {
+			.values {
+				@extend %p-primary;
+			}
+		}
+	}
+}
+
+.administrative {
+
+	.training,
+	.leave {
+		flex: 1;
+	}
+
+	.keys {
+		@extend %p-primary;
+	}
+
+	.values {
+
+		@extend %p-secondary;
+		// line-height: 24px;
+	}
+
+	.leave {
+		h3.title {
+			flex: 0 0 20px;
+		}
+
+		p {
+			flex: 1;
+		}
+	}
+}
+
+.satisfaction {
+	&>div {
+		flex: 1;
+	}
+
+	.keys {
+		@extend %p-small;
+	}
+
+	.values {
+		@extend %p-primary;
+	}
+}
