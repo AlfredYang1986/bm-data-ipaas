@@ -1,1 +1,108 @@
+{{#bp-layout direction='col' classNames='edu-container'}}
+    {{#bp-layout direction='col' classNames='mb-2 bg-white'}}
+        {{#bp-layout direction='row' main='between' cross='center' classNames='title-area'}}
+            <p class="">业务目标</p>
+            <p class="">单位时间<span>月</span></p>
+        {{/bp-layout}}
+        {{#bp-layout direction='row' main='between'}}
+            {{#bp-layout direction='row' mian='between'}}
+                {{#each model.goal as |ga|}}
+                    {{#bp-layout direction='row' main='between' cross='center' classNames='eff-list p-4'}}
+                        {{#bp-layout direction='col' classNames='circle-desc'}}
+                            <p class="text-minimum text-bottom">{{ga.name}}</p>
+                            <p class="section-number-small">{{ga.rate}}%</p>
+                        {{/bp-layout}}
+                        {{bp-circle
+                            circleData=ga.circleData
+                            circleColor=ga.circleColor
+                            }}
+                    {{/bp-layout}}
+                {{/each}}
+            {{/bp-layout}}
+        {{/bp-layout}}
+    {{/bp-layout}}
+
+    {{#bp-layout direction='col' classNames='bg-white p-4'}}
+        {{#bp-layout direction='row' main='between' cross='center'}}
+            <p class="">行为指标</p>
+            <p class="">单位时间<span>月</span></p>
+        {{/bp-layout}}
+        {{#bp-layout direction='col'}}
+            <p class="">教研反馈</p>
+            {{#bp-layout direction='row' main='between'}}
+                {{#each model.behavior as |bh|}}
+                    {{#bp-layout direction='col' cross='center'}}
+                        <p class="">{{bh.name}}</p>
+                        <p class="">{{bh.rate}}{{bh.unit}}</p>
+                    {{/bp-layout}}
+                {{/each}}
+            {{/bp-layout}}
+        {{/bp-layout}}
+    {{/bp-layout}}
+
+    {{#bp-layout direction='col'}}
+        {{#bp-layout direction='row' classNames='bg-white p-4'}}
+            <p class="">行政</p>
+        {{/bp-layout}}
+        {{#bp-layout direction='row'}}
+            {{#bp-layout direction='col' classNames='bg-white p-4'}}
+                <p class="">教学团队内训考核</p>
+                {{#bp-layout direction='row'}}
+                    <p class="">指标次数</p>
+                    <p class="">4次</p>
+                {{/bp-layout}}
+                {{#bp-layout direction='row'}}
+                    <p class="">完成次数</p>
+                    <p class="">2次</p>
+                {{/bp-layout}}
+            {{/bp-layout}}
+            {{#bp-layout direction='col' classNames='bg-white p-4'}}
+                <p class="">授课教师离职率</p>
+                <p class="">20%</p>
+            {{/bp-layout}}
+        {{/bp-layout}}
+        {{#bp-layout direction='col' classNames='bg-white p-4'}}
+            <p class="">报表提交</p>
+            {{#bp-layout direction='row'}}
+                {{#bp-layout direction='col'}}
+                    {{#bp-layout direction='row'}}
+                        <p class="">报表数量</p>
+                        <p class="">40份</p>
+                    {{/bp-layout}}
+                    {{#bp-layout direction='row'}}
+                        <p class="">提交次数</p>
+                        <p class="">40次</p>
+                    {{/bp-layout}}
+                {{/bp-layout}}
+                {{#bp-layout direction='col'}}
+                    {{#bp-layout direction='row'}}
+                        <p class="">提交及时率</p>
+                        <p class="">80%</p>
+                    {{/bp-layout}}
+                    {{#bp-layout direction='row'}}
+                        <p class="">提交准确率</p>
+                        <p class="">90%</p>
+                    {{/bp-layout}}
+                {{/bp-layout}}
+            {{/bp-layout}}
+        {{/bp-layout}}
+    {{/bp-layout}}
+
+    {{#bp-layout direction='col' classNames='bg-white p-4'}}
+        {{#bp-layout direction='row'}}
+            <p>满意度</p>
+        {{/bp-layout}}
+        {{#bp-layout direction='row'}}
+            {{#bp-layout direction='col'}}
+                <p class="">退费率</p>
+                <p>20%</p>
+            {{/bp-layout}}
+            {{#bp-layout direction='col'}}
+                <p class="">客诉率</p>
+                <p>20%</p>
+            {{/bp-layout}}
+        {{/bp-layout}}
+    {{/bp-layout}}
+
+{{/bp-layout}}
 {{outlet}}
