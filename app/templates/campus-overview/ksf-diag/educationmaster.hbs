@@ -1,1 +1,108 @@
+{{#bp-layout direction='col' classNames='edu-container'}}
+    {{#bp-layout direction='col' classNames='mb-2 bg-white'}}
+        {{#bp-layout direction='row' main='between' cross='center' classNames='title-area'}}
+            <p class="text-header-medium">业务目标</p>
+            <p class="text-p-small">单位时间 <span> 月</span></p>
+        {{/bp-layout}}
+        {{#bp-layout direction='row' main='between'}}
+            {{#each model.goal as |ga|}}
+                {{#bp-layout direction='row' main='between' cross='center' classNames='eff-list p-4'}}
+                    {{#bp-layout direction='col' classNames='circle-desc'}}
+                        <p class="text-p-small mb-2">{{ga.name}}</p>
+                        <p class="text-header-large">{{ga.rate}}%</p>
+                    {{/bp-layout}}
+
+                    {{bp-circle
+                        circleData=ga.circleData
+                        circleColor=ga.circleColor
+                        classNames='circle-area'
+                        }}
+                {{/bp-layout}}
+            {{/each}}
+        {{/bp-layout}}
+    {{/bp-layout}}
+
+    {{#bp-layout direction='col' classNames='bg-white'}}
+        {{#bp-layout direction='row' main='between' cross='center' classNames='title-area'}}
+            <p class="text-header-medium">行为指标</p>
+            <p class="text-p-small">单位时间 <span> -</span></p>
+        {{/bp-layout}}
+        {{#bp-layout direction='col' classNames='p-4'}}
+            <p class="text-header-small mb-4">教研反馈</p>
+            {{#bp-layout direction='row' main='between'}}
+                {{#each model.behavior as |bh|}}
+                    {{#bp-layout direction='col' cross='center' class='tech'}}
+                        <p class="text-p-small mb-2">{{bh.name}}</p>
+                        <p class="text-header-small">{{bh.rate}}{{bh.unit}}</p>
+                    {{/bp-layout}}
+                {{/each}}
+            {{/bp-layout}}
+        {{/bp-layout}}
+    {{/bp-layout}}
+
+    {{#bp-layout direction='col'}}
+        {{#bp-layout direction='row' cross='center' classNames='bg-white title-area mt-4 mb-2'}}
+            <p class="text-header-medium">行政</p>
+        {{/bp-layout}}
+        {{#bp-layout direction='row' classNames='mb-2'}}
+            {{#bp-layout direction='col' classNames='bg-white p-4 mr-2 admin'}}
+                <p class="text-header-small mb-4">教学团队内训考核</p>
+                {{#bp-layout direction='row' cross='center'}}
+                    <p class="text-p-primary mr-4 mb-3">指标次数</p>
+                    <p class="text-p-secondary ml-3 mb-3">4次</p>
+                {{/bp-layout}}
+                {{#bp-layout direction='row' cross='center'}}
+                    <p class="text-p-primary mr-4 ">完成次数</p>
+                    <p class="text-p-secondary ml-3">2次</p>
+                {{/bp-layout}}
+            {{/bp-layout}}
+            {{#bp-layout direction='col' classNames='bg-white p-4 admin'}}
+                <p class="text-header-small mb-4">授课教师离职率</p>
+                <p class="text-p-primary mt-3">20%</p>
+            {{/bp-layout}}
+        {{/bp-layout}}
+        {{#bp-layout direction='col' classNames='bg-white p-4 mb-4'}}
+            <p class="text-header-small mb-4">报表提交</p>
+            {{#bp-layout direction='row'}}
+                {{#bp-layout direction='col' classNames='reports'}}
+                    {{#bp-layout direction='row'}}
+                        <p class="text-p-primary mb-3 mr-4">报表数量</p>
+                        <p class="text-p-secondary">40份</p>
+                    {{/bp-layout}}
+                    {{#bp-layout direction='row'}}
+                        <p class="text-p-primary mr-4">提交次数</p>
+                        <p class="text-p-secondary">40次</p>
+                    {{/bp-layout}}
+                {{/bp-layout}}
+                {{#bp-layout direction='col' classNames='reports'}}
+                    {{#bp-layout direction='row'}}
+                        <p class="text-p-primary mb-3 mr-4 pl-4">提交及时率</p>
+                        <p class="text-p-secondary mr-4">80%</p>
+                    {{/bp-layout}}
+                    {{#bp-layout direction='row'}}
+                        <p class="text-p-primary mb-3 mr-4 pl-4">提交准确率</p>
+                        <p class="text-p-secondary mr-4">90%</p>
+                    {{/bp-layout}}
+                {{/bp-layout}}
+            {{/bp-layout}}
+        {{/bp-layout}}
+    {{/bp-layout}}
+
+    {{#bp-layout direction='col' classNames='bg-white mb-4 pb-3'}}
+        {{#bp-layout direction='row' classNames='bg-white title-area mt-3 mb-2'}}
+            <p class="text-header-medium">满意度</p>
+        {{/bp-layout}}
+        {{#bp-layout direction='row'}}
+            {{#bp-layout direction='col' cross='center' classNames='satisfaction pl-4'}}
+                <p class="text-p-small mb-2">退费率</p>
+                <p class="text-header-small">20%</p>
+            {{/bp-layout}}
+            {{#bp-layout direction='col' cross='center' classNames='satisfaction'}}
+                <p class="text-p-small mb-2 pl-4">客诉率</p>
+                <p class="text-header-small pl-4">20%</p>
+            {{/bp-layout}}
+        {{/bp-layout}}
+    {{/bp-layout}}
+
+{{/bp-layout}}
 {{outlet}}
