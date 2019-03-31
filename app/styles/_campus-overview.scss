@@ -195,6 +195,94 @@ a.hover {
 	}
 }
 
+.normal-page-container {
+	h2.title {
+		min-height: 54px;
+	}
+
+	.infos {
+		min-height: 125px;
+
+		.info {
+			flex: 1;
+
+			&.total-income {
+				p:first-child {
+					@extend %p-secondary;
+				}
+
+				p:last-child {
+					line-height: 41px;
+
+					font: {
+						size: 29px;
+						weight: 500;
+					}
+
+					color: $n800;
+				}
+			}
+
+			&.others {
+				div {
+					flex: 1;
+				}
+
+				.keys {
+					@extend %p-secondary;
+				}
+
+				.values {
+					@extend %p-primary;
+
+					.text-minimum {
+						@extend %p-small;
+					}
+
+					&.text-red {
+						color: $r500;
+					}
+
+					&.text-green {
+						color: $g500;
+					}
+				}
+			}
+		}
+	}
+
+	.teams {
+		min-height: 149px;
+
+		.stus,
+		.team {
+			flex: 1;
+
+			p:first-child {
+				@extend %p-secondary;
+			}
+
+			p:nth-child(2) {
+				@extend %title;
+
+				span {
+					@extend %p-small;
+				}
+			}
+
+			p:nth-child(3) {
+				span:last-child {
+					color: $g300;
+				}
+
+				span {
+					@extend %p-small;
+				}
+			}
+		}
+	}
+}
+
 .efficiency-area {
 	height: 93px;
 
