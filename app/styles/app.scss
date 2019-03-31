@@ -57,6 +57,7 @@ p {
 .normal-page-container {
 	width: 100%;
 	padding: $spacing*3;
+
 }
 
 div.bg-white {
@@ -68,9 +69,9 @@ div.bp-progress {
 }
 
 .bp-tabs {
-    .tab-pane {
-        &:focus {
-            outline: none;
-        }
-    }
+	.tab-pane {
+		&:focus {
+			outline: none;
+		}
+	}
 }
