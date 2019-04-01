@@ -136,14 +136,14 @@
 
     }
 }
-.time_line_box{
+.time-line-box{
     position: relative;
     height: 20px;
     overflow: hidden;
     ul li {
         list-style-type: none;
     }
-    .time_line{
+    .time-line{
         width: 160px;
         position: absolute;
         z-index: 1;
@@ -154,7 +154,7 @@
         -webkit-transition: -webkit-transform 0.4s;
         -moz-transition: -moz-transform 0.4s;
         transition: transform 0.4s;
-        .order_item{
+        .order-item{
             position: absolute;
             bottom: 0;
             z-index: 2;
@@ -164,7 +164,7 @@
             color: #3881FF;
             cursor: pointer;
         }
-        .order_item:after{
+        .order-item:after{
             content: '';
             position: absolute;
             left: 50%;
@@ -181,7 +181,7 @@
         //     background-color: #fff;
         //     border-color: #3881FF;
         // }
-        .filling_line{
+        .filling-line{
             position: absolute;
             z-index: 1;
             left: 0;

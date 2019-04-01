@@ -59,5 +59,8 @@ export default Controller.extend({
                 this.transitionToRoute("campus-overview.ksf-diag.index")
             }
         },
+        option() {
+            this.transitionToRoute('page-not-found')
+        }
     },
 });
