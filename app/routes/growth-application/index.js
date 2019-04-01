@@ -13,12 +13,6 @@ export default Route.extend({
 	model() {
 
 		return hash({
-			cycles: A([
-				// {name:'本日',value: 0 },
-				{ name: '本周', value: 1 },
-				{ name: '本月', value: 2 },
-
-			]),
 			cycleWeek: A([
 				{
 					title: '各内容销售额占比', sales: 60919,

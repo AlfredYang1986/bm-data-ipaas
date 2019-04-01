@@ -11,7 +11,7 @@
 			{{bp-icon icon='down'}}
 		{{/dd.button}}
 		{{#dd.menu as |menu|}}
-			{{#each model.cycles as |cycle|}}
+			{{#each cycles as |cycle|}}
 				{{#menu.option value=cycle onClick=(action (mut tmpCycle))}}
 					{{cycle.name}}
 				{{/menu.option}}
