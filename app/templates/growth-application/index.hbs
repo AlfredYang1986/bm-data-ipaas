@@ -87,11 +87,11 @@
 						<tr>
 							<td>{{dc.name}}</td>
 							<td>{{dc.type}}</td>
-							<td>{{dc.price}}</td>
-							<td>{{dc.lowestPrice}}</td>
-							<td>{{dc.salesVolume}}</td>
-							<td>{{dc.divided}}</td>
-							<td>{{dc.income}}</td>
+							<td>￥{{thousand-split dc.price}}</td>
+							<td>￥{{thousand-split dc.lowestPrice}}</td>
+							<td>{{thousand-split dc.salesVolume}}</td>
+							<td>￥{{thousand-split dc.divided}}</td>
+							<td>￥{{thousand-split dc.income}}</td>
 							<td><span onClick={{action "xxOnClick"}}>{{bp-icon icon="more"}}</span></td>
 						</tr>
 					{{/each}}
@@ -120,10 +120,10 @@
 							<td>{{dc.name}}</td>
 							<td>{{dc.type}}</td>
 							<td>{{dc.level}}</td>
-							<td>{{dc.purchase}}</td>
-							<td>{{dc.order}}</td>
-							<td>{{dc.money}}</td>
-							<td>{{dc.income}}</td>
+							<td>{{thousand-split dc.purchase}}</td>
+							<td>{{thousand-split dc.order}}</td>
+							<td>￥{{thousand-split dc.money}}</td>
+							<td>￥{{thousand-split dc.income}}</td>
 							<td><span onClick={{action "xxOnClick"}}>{{bp-icon icon="more"}}</span></td>
 						</tr>
 					{{/each}}
