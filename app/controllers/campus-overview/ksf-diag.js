@@ -17,7 +17,7 @@ export default Controller.extend({
             return tempArr;
         } else if (this.switchValue === 1) {
             let tempArr = A([
-                {id: '7', name: '孔奇', sex: 1, icon:'/images/avatar_female_04.png', contact: '18842569864', jobCode: 3},
+                {id: '7', name: '孔奇', sex: 1, icon:'/images/avatar_female_04.jpg', contact: '18842569864', jobCode: 3},
             ])
             this.set("curSelectId", tempArr.firstObject.id)
             return tempArr;
