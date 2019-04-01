@@ -21,20 +21,20 @@
         {{#bp-layout direction="row" classNames="income-overview-section"}}
             {{#bp-layout direction="col" main="between" cross="center" classNames="income-overview-section-left bg-white"}}
                 <p class="dashboard-label">总收入</p>
-                <p class="total-income">￥123123123123</p>
+                <p class="total-income">￥{{thousand-split 89920000}}</p>
             {{/bp-layout}}
             {{#bp-layout direction="row" classNames="income-overview-section-right bg-white"}}
                 {{#bp-layout direction="col" main="center" classNames="income-right-item"}}
                     <p class="dashboard-label">签单课时</p>
-                    <p class="dashboard-content"><span class="signed-hours">46546</span>小时</p>
+                    <p class="dashboard-content"><span class="signed-hours">{{thousand-split 53708}}</span>小时</p>
                 {{/bp-layout}}
                 {{#bp-layout direction="col" main="center" classNames="income-right-item"}}
-                    <p class="dashboard-label">签单课时</p>
-                    <p class="dashboard-content"><span class="cost-hours">46546</span>小时</p>
+                    <p class="dashboard-label">总消课时</p>
+                    <p class="dashboard-content"><span class="cost-hours">{{thousand-split 58000}}</span>小时</p>
                 {{/bp-layout}}
                 {{#bp-layout direction="col" main="center" classNames="income-right-item"}}
-                    <p class="dashboard-label">签单课时</p>
-                    <p class="other-income">¥1,000,000</p>
+                    <p class="dashboard-label">其他收益</p>
+                    <p class="other-income">¥{{thousand-split 4548880}}</p>
                 {{/bp-layout}}
             {{/bp-layout}}
         {{/bp-layout}}
@@ -48,7 +48,7 @@
                             <p class="dashboard-label">在校学生</p>
                         {{/bp-layout}}
                         {{#bp-layout direction="row" classNames="top-down"}}
-                            <p class="dashboard-content"><span class="big-num">3000</span>人</p>
+                            <p class="dashboard-content"><span class="big-num">{{thousand-split 3000}}</span>人</p>
                         {{/bp-layout}}
                     {{/bp-layout}}
                     {{#bp-layout direction="col" cross="center" classNames="top-container"}}
@@ -56,14 +56,14 @@
                             <p class="dashboard-label">总服务学生</p>
                         {{/bp-layout}}
                         {{#bp-layout direction="row" classNames="top-down"}}
-                            <p class="dashboard-content"><span class="big-num">13000</span>人</p>
+                            <p class="dashboard-content"><span class="big-num">{{thousand-split 13000}}</span>人</p>
                         {{/bp-layout}}
                     {{/bp-layout}}
                 {{/bp-layout}}
                 {{#bp-layout direction="col" classNames="status-overview-section-bottom"}}
                     {{#bp-layout direction="row" main="between" classNames="bottom-up"}}
                         <p class="dashboard-content">在校学生/总服务学生</p>
-                        <p class="dashboard-content">3000/13000</p>
+                        <p class="dashboard-content">{{thousand-split 3000}}/{{thousand-split 13000}}</p>
                     {{/bp-layout}}
                     {{#bp-layout direction="row" classNames="bottom-down"}}
                         {{#bp-progress as |p|}}
@@ -79,7 +79,7 @@
                             <p class="dashboard-label">总满班数</p>
                         {{/bp-layout}}
                         {{#bp-layout direction="row" classNames="top-down"}}
-                            <p class="dashboard-content"><span class="big-num">213</span>班</p>
+                            <p class="dashboard-content"><span class="big-num">{{thousand-split 213}}</span>班</p>
                         {{/bp-layout}}
                     {{/bp-layout}}
                     {{#bp-layout direction="col" cross="center" classNames="top-container"}}
@@ -87,14 +87,14 @@
                             <p class="dashboard-label">总开班数</p>
                         {{/bp-layout}}
                         {{#bp-layout direction="row" classNames="top-down"}}
-                            <p class="dashboard-content"><span class="big-num">567</span>班</p>
+                            <p class="dashboard-content"><span class="big-num">{{thousand-split 325}}</span>班</p>
                         {{/bp-layout}}
                     {{/bp-layout}}
                 {{/bp-layout}}
                 {{#bp-layout direction="col" classNames="status-overview-section-bottom"}}
                     {{#bp-layout direction="row" main="between" classNames="bottom-up"}}
                         <p class="dashboard-content">总满班数/总开班数</p>
-                        <p class="dashboard-content">213/567</p>
+                        <p class="dashboard-content">{{thousand-split 213}}/{{thousand-split 325}}</p>
                     {{/bp-layout}}
                     {{#bp-layout direction="row" classNames="bottom-down"}}
                         {{#bp-progress as |p|}}
@@ -128,11 +128,11 @@
                             {{#bp-layout direction="row" classNames="content-inner-left"}}
                                 <p class="list-tag">TOP 1</p>
                                 <p class="dashboard-header-small">五道口校区</p>
-                                <p class="dashboard-pri">总收入 ¥100,000,000</p>
+                                <p class="dashboard-pri">总收入 ¥{{thousand-split 98000000}}</p>
                             {{/bp-layout}}
                             {{#bp-layout direction="row" main="end" classNames="content-inner-right"}}
                                 <p class="dashboard-label">李松校长</p>
-                                <img class="head-img" src="/images/logo_baizao.png"/>
+                                <img class="head-img" src="/images/avatar_female_00@1x.jpg"/>
                             {{/bp-layout}}
                         {{/bp-layout}}
                     {{/bp-layout}}
@@ -141,11 +141,11 @@
                             {{#bp-layout direction="row" classNames="content-inner-left"}}
                                 <p class="list-tag">TOP 2</p>
                                 <p class="dashboard-header-small">三里屯校区</p>
-                                <p class="dashboard-pri">总收入 ¥92,980,000</p>
+                                <p class="dashboard-pri">总收入 ¥{{thousand-split 92980000}}</p>
                             {{/bp-layout}}
                             {{#bp-layout direction="row" main="end" classNames="content-inner-right"}}
                                 <p class="dashboard-label">王达校长</p>
-                                <img class="head-img" src="/images/logo_baizao.png"/>
+                                <img class="head-img" src="/images/avatar_male_00@1x.jpg"/>
                             {{/bp-layout}}
                         {{/bp-layout}}
                     {{/bp-layout}}
@@ -154,11 +154,11 @@
                             {{#bp-layout direction="row" classNames="content-inner-left"}}
                                 <p class="list-tag">TOP 3</p>
                                 <p class="dashboard-header-small">中关村校区</p>
-                                <p class="dashboard-pri">总收入 ¥87,430,000</p>
+                                <p class="dashboard-pri">总收入 ¥{{thousand-split 87430000}}</p>
                             {{/bp-layout}}
                             {{#bp-layout direction="row" main="end" classNames="content-inner-right"}}
                                 <p class="dashboard-label">蔓丽校长</p>
-                                <img class="head-img" src="/images/logo_baizao.png"/>
+                                <img class="head-img" src="/images/avatar_male_01@1x.jpg"/>
                             {{/bp-layout}}
                         {{/bp-layout}}
                     {{/bp-layout}}
