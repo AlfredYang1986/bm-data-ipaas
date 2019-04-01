@@ -1,5 +1,5 @@
 {{#bp-layout direction="col" classNames="bi-body"}}
-    {{bicom/bi-top-nav}}
+    {{bicom/bi-top-nav searchOnclick=(action "xxOnClick") notiOnClick=(action "xxOnClick") personOnclick=(action "xxOnClick")}}
     {{#bp-layout direction="row" classNames="bi-page-outer"}}
         {{#bp-nav theme='light' as |n|}}
             {{#n.link-to "dashboard"}}{{bp-icon icon='dashboard'}}Live Dashboard{{/n.link-to}}

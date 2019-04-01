@@ -9,4 +9,10 @@ export default Controller.extend({
         { name: '本月', value: 2 },
     ]),
     tmpCycle: EmberObject.create({ name: '本周', value: 1 }),
+
+    actions: {
+        xxOnClick() {
+            this.transitionToRoute("page-not-found");
+        }
+    }
 });
