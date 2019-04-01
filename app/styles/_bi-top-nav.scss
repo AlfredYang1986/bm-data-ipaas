@@ -5,7 +5,7 @@
 		height: 62px;
 		background-color: $n000;
 		padding: $spacing*2 $spacing*3;
-		@extend %shadow-z100;
+		box-shadow: 0 1px 2px 0 rgba(23,43,77,.12);
 	
 		.bi-top-nav-left {
 			img {
