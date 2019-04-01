@@ -17,19 +17,19 @@ export default Controller.extend({
             return tempArr;
         } else if (this.switchValue === 1) {
             let tempArr = A([
-                {id: '7', name: '撒旦法', sex: 1, icon:'/images/img_app_00.png', contact: '18842569864', jobCode: 3},
+                {id: '7', name: '孔奇', sex: 1, icon:'/images/img_app_00.png', contact: '18842569864', jobCode: 3},
             ])
             this.set("curSelectId", tempArr.firstObject.id)
             return tempArr;
         } else if (this.switchValue === 2) {
             let tempArr = A([
-                {id: '9', name: '积分', sex: 1, icon:'/images/img_app_00.png', contact: '18842569864', jobCode: 5},
+                {id: '9', name: '张永辉', sex: 1, icon:'/images/img_app_00.png', contact: '18842569864', jobCode: 5},
             ])
             this.set("curSelectId", tempArr.firstObject.id)
             return tempArr;
         } else if (this.switchValue === 3) {
             let tempArr = A([
-                {id: '4', name: '藏德防', sex: 1, icon:'/images/img_app_00.png', contact: '18842569864', jobCode: 0},
+                {id: '4', name: '张宇', sex: 1, icon:'/images/img_app_00.png', contact: '18842569864', jobCode: 0},
                 {id: '5', name: '莎莎', sex: 0, icon:'/images/img_app_00.png', contact: '18842569865', jobCode: 1},
                 {id: '6', name: '姚非', sex: 0, icon:'/images/img_app_00.png', contact: '18842569866', jobCode: 2},
             ])
