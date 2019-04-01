@@ -67,8 +67,8 @@
 			{{#bp-layout main="between" classNames="mt-3 mb-4"}}
 				{{bp-input}}
 				<p>
-					{{#bp-button}}导入内容{{/bp-button}}
-					{{#bp-button}}新建内容{{/bp-button}}
+					{{#bp-button click=(action "xxOnClick")}}导入内容{{/bp-button}}
+					{{#bp-button click=(action "xxOnClick")}}新建内容{{/bp-button}}
 				</p>
 			{{/bp-layout}}
 			<table class="table distribution-table">
@@ -92,7 +92,7 @@
 							<td>{{dc.salesVolume}}</td>
 							<td>{{dc.divided}}</td>
 							<td>{{dc.income}}</td>
-							<td><span>{{bp-icon icon="more"}}</span></td>
+							<td><span onClick={{action "xxOnClick"}}>{{bp-icon icon="more"}}</span></td>
 						</tr>
 					{{/each}}
 				</tbody>
@@ -101,7 +101,7 @@
 		{{#tabs.pane elementId="channel"}}
 			{{#bp-layout main="between" classNames="mt-3 mb-4"}}
 				{{bp-input}}
-				{{#bp-button}}新增渠道{{/bp-button}}
+				{{#bp-button click=(action "xxOnClick")}}新增渠道{{/bp-button}}
 			{{/bp-layout}}
 			<table class="table distribution-table">
 				<thead>
@@ -124,7 +124,7 @@
 							<td>{{dc.order}}</td>
 							<td>{{dc.money}}</td>
 							<td>{{dc.income}}</td>
-							<td><span>{{bp-icon icon="more"}}</span></td>
+							<td><span onClick={{action "xxOnClick"}}>{{bp-icon icon="more"}}</span></td>
 						</tr>
 					{{/each}}
 				</tbody>
