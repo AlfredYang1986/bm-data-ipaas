@@ -8,7 +8,7 @@
 	{{#bp-layout main="between" classNames="infos mb-2"}}
 		{{#bp-layout direction="col" classNames="info total-income bg-white p-4 mr-1"}}
 			<p class="mb-3 text-center">校区总收入</p>
-			<p class="text-center">￥39865412</p>
+			<p class="text-center">￥{{thousand-split 39865412}}</p>
 		{{/bp-layout}}
 		{{#bp-layout main="between" classNames="info others bg-white p-4"}}
 			{{#bp-layout direction="col" main="center" classNames="pr-4 border-right"}}
