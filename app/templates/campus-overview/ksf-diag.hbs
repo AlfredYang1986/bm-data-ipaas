@@ -10,7 +10,7 @@
 			{{#bg.button type="default" value=2}}教学团队{{/bg.button}}
 			{{#bg.button type="default" value=3}}市场部门{{/bg.button}}
 		{{/bp-button-group}}
-		{{#bp-button type='primary'}}KSF设置{{/bp-button}}
+		{{#bp-button type='primary' click=(action 'option')}}KSF设置{{/bp-button}}
 	{{/bp-layout}}
 	{{#if (eq switchValue 0)}}
 		{{#bp-layout direction="row" classNames="main-content-outer"}}
