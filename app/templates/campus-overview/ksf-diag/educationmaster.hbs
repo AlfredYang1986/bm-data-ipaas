@@ -39,7 +39,7 @@
                             <p class="text-p-small mb-2">{{bh.name}}</p>
                             <img src={{bh.icon}} alt="" class="icon-info">
                         {{/bp-layout}}
-                        <p class="text-header-small">{{bh.rate}}{{bh.unit}}</p>
+                        <p class="text-header-small">{{thousand-split bh.rate}}{{bh.unit}}</p>
                     {{/bp-layout}}
                 {{/each}}
             {{/bp-layout}}
@@ -72,7 +72,7 @@
             {{#bp-layout direction='row'}}
                 {{#bp-layout direction='col' classNames='reports'}}
                     {{#bp-layout direction='row'}}
-                        <p class="text-p-primary mb-3 mr-4 text-width">报表数量</p>
+                        <p class="text-p-primary mb-3 mr-1 text-width">报表数量</p>
                         <p class="text-p-secondary">40份</p>
                     {{/bp-layout}}
                     {{#bp-layout direction='row'}}

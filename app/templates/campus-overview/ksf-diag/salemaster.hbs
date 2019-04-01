@@ -4,7 +4,7 @@
 	<span class="subtitle">单位时间 月</span>
 {{/bp-layout}}
 {{#bp-layout direction='col' classNames="mb-4 p-4 bg-white"}}
-	{{#bp-layout main="between" cross="center" 
+	{{#bp-layout main="between" cross="center"
 		classNames="business-target mb-4"}}
 		{{#bp-layout main="center" classNames="gauge-container"}}
 			{{bp-gauge value=65 maxValue=100}}
@@ -15,23 +15,23 @@
 				<p class="keys">团队销售总达成{{bp-icon icon="info" size="small"}}</p>
 			{{/bp-layout}}
 			{{#bp-layout direction="col"}}
-				<p class="values mb-4 ml-4">¥ 90,000,000</p>
-				<p class="values ml-4">¥ 60,000,000</p>
+				<p class="values mb-4 ml-4">¥ {{thousand-split 90000000}}</p>
+				<p class="values ml-4">¥ {{thousand-split 60000000}}</p>
 			{{/bp-layout}}
 		{{/bp-layout}}
 	{{/bp-layout}}
 	{{#bp-layout main="between" classNames="business-infos"}}
 		{{#bp-layout direction="col" main="between" classNames="border-right"}}
 			<p class="keys mb-3">团队人均达成</p>
-			<p class="values">￥45017</p>
+			<p class="values">￥{{thousand-split 4000000}}</p>
 		{{/bp-layout}}
 		{{#bp-layout direction="col" main="between" classNames="border-right"}}
 			<p class="keys  mb-3">团队人均新增签单额</p>
-			<p class="values">￥45017</p>
+			<p class="values">￥{{thousand-split 68000}}</p>
 		{{/bp-layout}}
 		{{#bp-layout direction="col" main="between"}}
 			<p class="keys mb-3">团队人均续费额</p>
-			<p class="values">￥45017</p>
+			<p class="values">￥{{thousand-split 68000}}</p>
 		{{/bp-layout}}
 	{{/bp-layout}}
 {{/bp-layout}}
@@ -40,7 +40,7 @@
 	<p class="title">行为指标</p>
 	<span class="subtitle">单位时间 -</span>
 {{/bp-layout}}
-{{#bp-layout direction="col" main="between" 
+{{#bp-layout direction="col" main="between"
 	classNames="behavioral-indicator  mb-4 p-4 bg-white"}}
 	{{#bp-layout main="between" classNames="titles mb-4"}}
 		<h3 class="title"><span class="title">电话拜访</span></h3>
@@ -48,10 +48,10 @@
 	{{/bp-layout}}
 	{{#bp-layout main="between" classNames="contents"}}
 		{{#bp-layout direction="col" classNames="content px-4 pb-4 border-right"}}
-			<p class="keys mb-2">团队总指标{{bp-icon icon="info"}}</p>
-			<p class="values mb-4">1999999 <span class="unti">个</span></p>
+			<p class="keys mb-2">团队总指标{{bp-icon icon="info" size="small"}}</p>
+			<p class="values mb-4">{{thousand-split 100000000}} <span class="unti">个</span></p>
 			<p class="keys mb-2">团队人均指标{{bp-icon icon="inof"}}</p>
-			<p class="values">19989999 <span class="unti">个</span></p>
+			<p class="values">{{thousand-split 1000}} <span class="unti">个</span></p>
 		{{/bp-layout}}
 		{{#bp-layout cross="center" classNames="customers p-4"}}
 			{{#bp-layout direction="col" classNames="mr-3"}}
@@ -59,8 +59,8 @@
 				<p class="keys">实到客户数</p>
 			{{/bp-layout}}
 			{{#bp-layout direction="col"}}
-				<p class="values mb-3">899,999 <span class="unit">个</span></p>
-				<p class="values">899,999 <span class="unit">个</span></p>
+				<p class="values mb-3">{{thousand-split 899999}} <span class="unit">个</span></p>
+				<p class="values">{{thousand-split 50000}} <span class="unit">个</span></p>
 			{{/bp-layout}}
 		{{/bp-layout}}
 	{{/bp-layout}}
@@ -71,25 +71,25 @@
 {{/bp-layout}}
 {{#bp-layout main="between"
 	classNames="administrative mb-4"}}
-	{{#bp-layout direction="col" 
+	{{#bp-layout direction="col"
 		classNames="training mr-2 p-4 bg-white"}}
 		{{#bp-layout tagName="h3" classNames="title"}}
 			<span class="title">团队内训考核</span>
 		{{/bp-layout}}
 		{{#bp-layout classNames="pt-4"}}
 			{{#bp-layout direction="col" classNames="keys"}}
-				<p class="mb-3">指标次数{{bp-icon icon="info" size="small"}}</p>
+				<p class="mb-3">指标次数</p>
 				<p class="mb-3">完成次数{{bp-icon icon="info" size="small"}}</p>
 				<p class="mb-3">人均分数{{bp-icon icon="info" size="small"}}</p>
 			{{/bp-layout}}
 			{{#bp-layout direction="col" classNames="values ml-3"}}
-				<p class="mb-3 ">6次</p>
-				<p class="mb-3 ">8次</p>
-				<p class="mb-3 ">2次</p>
+				<p class="mb-3 ">{{thousand-split 6}}次</p>
+				<p class="mb-3 ">{{thousand-split 8}}次</p>
+				<p class="mb-3 ">{{thousand-split 80}}分</p>
 			{{/bp-layout}}
 		{{/bp-layout}}
 	{{/bp-layout}}
-	{{#bp-layout direction="col" mian="between" 
+	{{#bp-layout direction="col" mian="between"
 		classNames="leave p-4 bg-white"}}
 		{{#bp-layout tagName="h3" classNames="title"}}
 			<span class="title">团队离职率</span>
