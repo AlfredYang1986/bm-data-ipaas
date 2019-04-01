@@ -7,19 +7,19 @@
             {{#bp-layout direction='col' cross='center' main='center' classNames='campus-list'}}
                 <div>
                     <p class="section-secondary-title">开班数/满班数</p>
-                    <p class="section-top section-number-medium">10/20</p>
+                    <p class="section-top section-number-medium">{{thousand-split 10}}/{{thousand-split 20}}</p>
                 </div>
             {{/bp-layout}}
             {{#bp-layout direction='col' cross='center' main='center' classNames='campus-list'}}
                 <div>
                     <p class="section-secondary-title">总续费率</p>
-                    <p class="section-top section-number-medium">40%</p>
+                    <p class="section-top section-number-medium">{{thousand-split 40}}%</p>
                 </div>
             {{/bp-layout}}
             {{#bp-layout direction='col' cross='center' main='center' classNames='campus-list'}}
                 <div>
                     <p class="section-secondary-title">总转介绍</p>
-                    <p class="section-top section-number-medium">80<span class="text-minimum">个</span></p>
+                    <p class="section-top section-number-medium">{{thousand-split 80}}<span class="text-minimum">个</span></p>
                 </div>
             {{/bp-layout}}
         {{/bp-layout}}
@@ -33,19 +33,19 @@
         {{#bp-layout direction='col' main='between' classNames='market-area'}}
             {{#bp-layout direction='row'}}
                 <p class="list-title">市场总投入</p>
-                <p class="section-secondary-title">¥9,878</p>
+                <p class="section-secondary-title">¥{{thousand-split 9878}}</p>
             {{/bp-layout}}
             {{#bp-layout direction='row'}}
                 <p class="list-title">总实到/总诺到人数</p>
-                <p class="section-secondary-title">320/400人</p>
+                <p class="section-secondary-title">{{thousand-split 320}}/{{thousand-split 400}}人</p>
             {{/bp-layout}}
             {{#bp-layout direction='row'}}
                 <p class="list-title">总拉访实到人数</p>
-                <p class="section-secondary-title">1,342人</p>
+                <p class="section-secondary-title">{{thousand-split 1342}}人</p>
             {{/bp-layout}}
             {{#bp-layout direction='row'}}
                 <p class="list-title">转化率</p>
-                <p class="section-secondary-title">15%</p>
+                <p class="section-secondary-title">{{thousand-split 15}}%</p>
             {{/bp-layout}}
         {{/bp-layout}}
     {{/bp-layout}}
@@ -61,12 +61,12 @@
                 {{#bp-layout direction='row' cross='center' classNames='list-bottom'}}
                     <span class="blue-dot"></span>
                     <p class="list-title">正在进行</p>
-                    <p class="sectio-number-medium">5</p>
+                    <p class="sectio-number-medium">{{thousand-split 5}}</p>
                 {{/bp-layout}}
                 {{#bp-layout direction='row' cross='center'}}
                     <span class="green-dot"></span>
                     <p class="list-title">即将进行</p>
-                    <p class="sectio-number-medium">8</p>
+                    <p class="sectio-number-medium">{{thousand-split 8}}</p>
                 {{/bp-layout}}
             {{/bp-layout}}
         {{/bp-layout}}
@@ -86,7 +86,7 @@
                         }}
                     {{#bp-layout direction='col' classNames='circle-desc'}}
                         <p class="text-minimum text-bottom">{{mk.name}}</p>
-                        <p class="section-number-small">{{mk.rate}}</p>
+                        <p class="section-number-small">{{thousand-split mk.rate}}%</p>
                     {{/bp-layout}}
                 {{/bp-layout}}
             {{/each}}
@@ -100,11 +100,11 @@
         {{#bp-layout direction='row' mian='between' classNames='client-area'}}
             {{#bp-layout direction='col' main='center' cross='center' classNames='client-list'}}
                 <p class="text-minimum text-bottom">当前客户数量</p>
-                <p class="section-number-small">1,000</p>
+                <p class="section-number-small">{{thousand-split 1000}}</p>
             {{/bp-layout}}
             {{#bp-layout direction='col' main='center' cross='center'  classNames='client-list'}}
                 <p class="text-minimum text-bottom">新消息数</p>
-                <p class="section-number-small">55</p>
+                <p class="section-number-small">{{thousand-split 55}}</p>
             {{/bp-layout}}
         {{/bp-layout}}
     {{/bp-layout}}
@@ -117,23 +117,23 @@
         {{/bp-layout}}
         {{#bp-layout direction='row' mian='between' classNames='tech-area'}}
             {{#bp-layout direction='col' main='center' cross='center' classNames='texh-list'}}
-                <p class="section-number-medium text-bottom">10</p>
+                <p class="section-number-medium text-bottom">{{thousand-split 10}}</p>
                 <p class="section-secondary-title">平均参与班级数</p>
             {{/bp-layout}}
             {{#bp-layout direction='col' main='center' cross='center' classNames='texh-list'}}
-                <p class="section-number-medium text-bottom">10</p>
+                <p class="section-number-medium text-bottom">{{thousand-split 10}}</p>
                 <p class="section-secondary-title">平均授课数量</p>
             {{/bp-layout}}
             {{#bp-layout direction='col' main='center' cross='center' classNames='texh-list'}}
-                <p class="section-number-medium text-bottom">45%</p>
+                <p class="section-number-medium text-bottom">{{thousand-split 45}}%</p>
                 <p class="section-secondary-title">客户续费率</p>
             {{/bp-layout}}
             {{#bp-layout direction='col' main='center' cross='center' classNames='texh-list'}}
-                <p class="section-number-medium text-bottom">98%</p>
+                <p class="section-number-medium text-bottom">{{thousand-split 98}}%</p>
                 <p class="section-secondary-title">消课率</p>
             {{/bp-layout}}
             {{#bp-layout direction='col' main='center' cross='center' classNames='texh-list'}}
-                <p class="section-number-medium text-bottom">100%</p>
+                <p class="section-number-medium text-bottom">{{thousand-split 100}}%</p>
                 <p class="section-secondary-title">内训完成度</p>
             {{/bp-layout}}
         {{/bp-layout}}
@@ -145,7 +145,7 @@
         {{/bp-layout}}
         {{#bp-layout direction='row' mian='center' classNames='stud-area'}}
             {{#bp-layout direction='col' main='center' cross='center' classNames='stud-list'}}
-                <p class="section-number-medium text-bottom">1,000</p>
+                <p class="section-number-medium text-bottom">{{thousand-split 1000}}</p>
                 <p class="section-secondary-title">在籍学员人数</p>
             {{/bp-layout}}
         {{/bp-layout}}

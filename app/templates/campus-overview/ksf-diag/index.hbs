@@ -13,9 +13,9 @@
 		{{/bp-layout}}
 		{{#bp-layout direction="col" classNames="p-4"}}
 			<p class="keys">总收入指标</p>
-			<p class="values mb-4">￥1286513</p>
+			<p class="values mb-4">￥{{thousand-split 1286513}}</p>
 			<p class="keys">总收入达成</p>
-			<p class="values">￥1286513</p>
+			<p class="values">￥{{thousand-split 480000}}</p>
 		{{/bp-layout}}
 	{{/bp-layout}}
 {{/bp-layout}}
@@ -26,32 +26,33 @@
 	{{#bp-layout main="between" classNames="school-cost"}}
 		{{#bp-layout direction="col" classNames="p-4"}}
 			<p class="keys">预算</p>
-			<p class="values">￥1286513</p>
+			<p class="values">￥{{thousand-split 1286513}}</p>
 		{{/bp-layout}}
 		{{#bp-layout direction="col" classNames="p-4"}}
 			<p class="keys">实际投入</p>
-			<p class="values">￥1286513</p>
+			<p class="values">￥{{thousand-split 480000}}</p>
 		{{/bp-layout}}
 	{{/bp-layout}}
 {{/bp-layout}}
 {{#bp-layout main="between" classNames="school-others"}}
 	{{#bp-layout direction="col" classNames="mr-2 p-4 bg-white"}}
-		<h3 class="title mb-4"><span class="title">平均市场活动实到客户数</span></h3>
-		<p class="values">￥1286513 <span class="unit">个</span> </p>
+		<h3 class="title mb-2"><span class="title">平均市场活动实到客户数</span></h3>
+		{{bp-icon icon="info" size="small"}}
+		<p class="values mt-3">{{thousand-split 80}} <span class="unit">个</span> </p>
 	{{/bp-layout}}
 	{{#bp-layout direction="col" classNames="mr-2 p-4 bg-white"}}
 		<h3 class="title mb-4"><span class="title">个人</span></h3>
-		<p class="values mb-3">6513 <span class="unit">单</span> </p>
+		<p class="values mb-3">{{thousand-split 39}} <span class="unit">单</span> </p>
 		<p class="unit">协助签单数量</p>
 	{{/bp-layout}}
 	{{#bp-layout direction="col" classNames="p-4 bg-white"}}
 		<h3 class="title mb-4"><span class="title">客诉率</span></h3>
-		<p class="values"><span class="mr-3">指标</span>9 <span class="unit">次</span> </p>
-		<p class="values"><span class="mr-3">达成</span>5 <span class="unit">次</span> </p>
+		<p class="values mb-3"><span class="mr-3">指标</span>{{thousand-split 0}} <span class="unit">次</span> </p>
+		<p class="values"><span class="mr-3">达成</span>{{thousand-split 4}} <span class="unit">次</span> </p>
 	{{/bp-layout}}
 {{/bp-layout}}
 {{#bp-layout tagName="h2" main="between" cross="center"
-	classNames="px-4 mb-2 bg-white title"}}
+	classNames="px-4 mb-2 bg-white title mt-4"}}
 	<p class="title">行为指标</p>
 	<span class="subtitle">单位时间 -</span>
 {{/bp-layout}}
@@ -64,14 +65,14 @@
 				<p>完成次数{{bp-icon icon="info" size="small"}}</p>
 			</div>
 			<div class="values">
-				<p class="mb-3 ml-4">6次</p>
-				<p class="ml-4">9次</p>
+				<p class="mb-3 ml-4">{{thousand-split 6}}次</p>
+				<p class="ml-4">{{thousand-split 9}}次</p>
 			</div>
 		{{/bp-layout}}
 	{{/bp-layout}}
 	{{#bp-layout direction="col" classNames="item mr-2 p-4 bg-white"}}
 		<h3 class="title mb-4"><span class="title">离职率</span></h3>
-		<p class="values">20%</p>
+		<p class="values">{{thousand-split 20}}%</p>
 	{{/bp-layout}}
 {{/bp-layout}}
 {{#bp-layout direction='col' classNames="mb-2 p-4 bg-white"}}
@@ -85,8 +86,8 @@
 				<p>提交次数{{bp-icon icon="info" size="small"}}</p>
 			</div>
 			<div class="values">
-				<p class="mb-3 ml-4">60份</p>
-				<p class="ml-4">90次</p>
+				<p class="mb-3 ml-4">{{thousand-split 40}}份</p>
+				<p class="ml-4">{{thousand-split 40}}次</p>
 			</div>
 		{{/bp-layout}}
 		{{#bp-layout classNames="item p-4"}}
@@ -95,8 +96,8 @@
 				<p>提交准确率{{bp-icon icon="info" size="small"}}</p>
 			</div>
 			<div class="values">
-				<p class="mb-3 ml-4">46%</p>
-				<p class="ml-4">91%</p>
+				<p class="mb-3 ml-4">{{thousand-split 80}}%</p>
+				<p class="ml-4">{{thousand-split 90}}%</p>
 			</div>
 		{{/bp-layout}}
 	{{/bp-layout}}

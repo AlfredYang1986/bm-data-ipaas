@@ -17,7 +17,7 @@
 			{{#bp-layout direction="col" classNames="member-list-area bg-white"}}
 				{{#bp-layout direction="row" cross="center" classNames="member-list-title bg-white"}}
 					<p class="member-list-type">管理层名单</p>
-					<p class="member-count">{{memberList.length}}</p>
+					<p class="member-count">{{thousand-split memberList.length}}</p>
 				{{/bp-layout}}
 				{{#bp-layout direction="col" classNames="member-list-content bg-white"}}
 					{{#each memberList as |item|}}
@@ -68,8 +68,8 @@
 								<p class="keys">个人销售总达成{{bp-icon icon="info" size="small"}}</p>
 							{{/bp-layout}}
 							{{#bp-layout direction="col"}}
-								<p class="values mb-4 ml-4">¥ 9,000,000</p>
-								<p class="values ml-4">60 <span class="unit">个</span></p>
+								<p class="values mb-4 ml-4">¥ {{thousand-split 9000000}}</p>
+								<p class="values ml-4">{{thousand-split 60}} <span class="unit">个</span></p>
 							{{/bp-layout}}
 						{{/bp-layout}}
 					{{/bp-layout}}
