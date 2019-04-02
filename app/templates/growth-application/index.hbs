@@ -42,7 +42,7 @@
 				widthSize="auto"}}
 				<p class="desc text-center">
 					<span class="mr-2">总销售额</span>
-					<span>¥{{cycle.sales}}</span>
+					<span>¥{{thousand-split cycle.sales}}</span>
 				</p>
 			{{/bp-layout}}
 		{{/each}}
@@ -111,7 +111,7 @@
 					<th>采购内容总数</th>
 					<th>分销订单总数 </th>
 					<th>分销订单总金额</th>
-					<th>总收益</th>
+					<th>累计收益</th>
 					<th>操作</th>
 				</thead>
 				<tbody class="bg-white">

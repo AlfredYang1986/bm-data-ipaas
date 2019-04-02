@@ -15,46 +15,46 @@ export default Route.extend({
 		return hash({
 			cycleWeek: A([
 				{
-					title: '各内容销售额占比', sales: '60,919',
+					title: '各内容销售额占比', sales: '3683120',
 					circle: {
 						data: A([
-							{ value: 13246, name: '服务' },
-							{ value: 47721, name: '商品' },
-							{ value: 30535, name: '课程' },
+							{ value: 842100, name: '商品' },
+							{ value: 2120000, name: '课程' },
+							{ value: 721020, name: '服务' },
 
 						]),
 						color: A(['#79e2f2', '#998dd9', '#79f2c0'])
 					}
 				},
 				{
-					title: '各内容收益占比', sales: '9,875',
+					title: '各内容收益占比', sales: '3142300',
 					circle: {
 						data: A([
-							{ value: 34770, name: '服务' },
-							{ value: 17121, name: '商品' },
-							{ value: 35444, name: '课程' },
+							{ value: 720200, name: '商品' },
+							{ value: 1820000, name: '课程' },
+							{ value: 602100, name: '服务' },
 
 						]),
 						color: A(['#79e2f2', '#998dd9', '#79f2c0'])
 					}
 				},
 				{
-					title: '各渠道销售额占比', sales: '41,847',
+					title: '各渠道销售额占比', sales: '3683120',
 					circle: {
 						data: A([
-							{ value: 7495, name: 'SaaS平台' },
-							{ value: 44308, name: '小程序' },
-							{ value: 162300, name: '百造门店' },
+							{ value: 2315000, name: '校长星球' },
+							{ value: 552010, name: '小程序' },
+							{ value: 816110, name: '百造门店' },
 
 						]),
 						color: A(['#79e2f2', '#998dd9', '#79f2c0'])
 					}
 				},
 				{
-					title: '各渠道收益占比', sales: '17,284',
+					title: '各渠道收益占比', sales: '3142300',
 					circle: {
 						data: A([
-							{ value: 248800, name: 'SaaS平台' },
+							{ value: 1916220, name: '校长星球' },
 							{ value: 484800, name: '小程序' },
 							{ value: 741280, name: '百造门店' },
 
@@ -162,24 +162,24 @@ export default Route.extend({
 			},
 			distributionContents: A([
 				{
-					name: '龙民节小教具', type: '商品', price: 200,
-					lowestPrice: 180, salesVolume: 56003, divided: 27168,
-					income: 7419, operating: 1
+					name: '诸葛连弩 套装', type: '商品', price: 88,
+					lowestPrice: 68, salesVolume: 3718, divided: 51290,
+					income: 23871, operating: 1
 				}, {
-					name: '龙民节课程(次卡)', type: '课程', price: 500,
-					lowestPrice: 400, salesVolume: 51583, divided: 25265,
-					income: 6478, operating: 1
+					name: '《牛顿与达芬奇》课程3年授权', type: '课程', price: 40000,
+					lowestPrice: 32000, salesVolume: 15, divided: 124200,
+					income: 400800, operating: 1
 				}, {
-					name: '龙民节(全程陪同体验)', type: '服务', price: 300,
-					lowestPrice: 150, salesVolume: 62671, divided: 2809,
-					income: 19020, operating: 1
+					name: '开业活动总部支持', type: '服务', price: 12000,
+					lowestPrice: 11000, salesVolume: 12, divided: 10000,
+					income: 134000, operating: 1
 				}
 			]),
 			distributionChannels: A([
 				{
-					name: 'SaaS平台', type: 'SaaS平台', level: '一级',
-					purchase: 180, order: 400, money: 7495,
-					income: 248800
+					name: '校长星球', type: '加盟渠道商', level: '一级',
+					purchase: 18, order: 40, money: 2315000,
+					income: 1916200
 				},
 				{
 					name: '小程序', type: '小程序', level: '一级',
