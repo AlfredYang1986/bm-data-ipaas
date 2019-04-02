@@ -164,7 +164,7 @@ export default Route.extend({
 				{
 					name: '诸葛连弩 套装', type: '商品', price: 88,
 					lowestPrice: 68, salesVolume: 3718, divided: 51290,
-					income: 23871, operating: 1
+					income: 238714, operating: 1
 				}, {
 					name: '《牛顿与达芬奇》课程3年授权', type: '课程', price: 40000,
 					lowestPrice: 32000, salesVolume: 15, divided: 124200,
