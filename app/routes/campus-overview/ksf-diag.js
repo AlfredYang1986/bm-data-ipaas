@@ -23,12 +23,12 @@ export default Route.extend({
                     { value: 0.5, name: '未消课' }
                 ])
             },{
-                rate: 10,
+                rate: 90,
                 name: '续费率',
                 circleColor: A(['#FFAB00', '#F4F5F7']),
                 circleData:A([
-                    { value: 0.1, name: '已续费' },
-                    { value: 0.9, name: '未续费' }
+                    { value: 0.9, name: '已续费' },
+                    { value: 0.1, name: '未续费' }
                 ])
             }]),
             behavior: A([{

@@ -15,7 +15,7 @@ export default Route.extend({
 		return hash({
 			cycleWeek: A([
 				{
-					title: '各内容销售额占比', sales: '3683120',
+					title: '内容销售额占比', sales: '3683120',
 					circle: {
 						data: A([
 							{ value: 842100, name: '商品' },
@@ -27,7 +27,7 @@ export default Route.extend({
 					}
 				},
 				{
-					title: '各内容收益占比', sales: '3142300',
+					title: '内容收益占比', sales: '3142300',
 					circle: {
 						data: A([
 							{ value: 720200, name: '商品' },
@@ -39,7 +39,7 @@ export default Route.extend({
 					}
 				},
 				{
-					title: '各渠道销售额占比', sales: '3683120',
+					title: '渠道销售额占比', sales: '3683120',
 					circle: {
 						data: A([
 							{ value: 2315000, name: '校长星球' },
@@ -51,7 +51,7 @@ export default Route.extend({
 					}
 				},
 				{
-					title: '各渠道收益占比', sales: '3142300',
+					title: '渠道收益占比', sales: '3142300',
 					circle: {
 						data: A([
 							{ value: 1916220, name: '校长星球' },
