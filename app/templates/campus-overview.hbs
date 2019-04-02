@@ -8,7 +8,7 @@
 	{{#bp-layout main="between" classNames="infos mb-2"}}
 		{{#bp-layout direction="col" classNames="info total-income bg-white p-4 mr-1"}}
 			<p class="mb-3 text-center">校区总收入</p>
-			<p class="text-center">￥{{thousand-split 39865412}}</p>
+			<p class="text-center">￥{{thousand-split 8425000}}</p>
 		{{/bp-layout}}
 		{{#bp-layout main="between" classNames="info others bg-white p-4"}}
 			{{#bp-layout direction="col" main="center" classNames="pr-4 border-right"}}
@@ -17,7 +17,7 @@
 			{{/bp-layout}}
 			{{#bp-layout direction="col" main="center" classNames="px-4 border-right"}}
 				<p class="keys mb-2">总消课时</p>
-				<p class="values text-green">{{thousand-split 53708}}<span class="text-minimum">小时</span></p>
+				<p class="values text-green">{{thousand-split 46720}}<span class="text-minimum">小时</span></p>
 			{{/bp-layout}}
 			{{#bp-layout direction="col" main="center" classNames="px-4"}}
 				<p class="keys mb-2">其他收益</p>
@@ -28,14 +28,14 @@
 	{{#bp-layout main="between" classNames="teams"}}
 		{{#bp-layout direction="col" main="between" classNames="stus bg-white p-4 mr-1"}}
 			<p class="mb-3">在校学生/总服务学生</p>
-			<p class="mb-3">{{thousand-split 660}}/{{thousand-split 10000}} <span>人</span> </p>
+			<p class="mb-3">{{thousand-split 480}}/{{thousand-split 532}} <span>人</span> </p>
 			{{#bp-progress classNames='progress' as |p|}}
 				{{p.bar value=660 minValue=0 maxValue=10000}}
 			{{/bp-progress}}
 		{{/bp-layout}}
 		{{#bp-layout direction="col" main="between" classNames="team bg-white p-4"}}
 			<p class="mb-3 team-left">团队人数</p>
-			<p class="mb-3 team-left">{{thousand-split 66}}<span>人</span> </p>
+			<p class="mb-3 team-left">{{thousand-split 15}}<span>人</span> </p>
 			<p class="team-left"><span>同比 </span><span> {{thousand-split 20}}%</span>{{bp-icon icon='increase'}}</p>
 		{{/bp-layout}}
 	{{/bp-layout}}
