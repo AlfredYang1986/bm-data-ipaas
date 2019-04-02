@@ -45,43 +45,49 @@
 {{/bp-layout}}
 {{#bp-layout main="between" classNames="authorization mb-2"}}
 	<div class="container p-4 mr-2 bg-white">
-		{{#bp-layout tagName="h3" main="between" classNames="title"}}
-			<span class="title">已授权APP <span class="ml-2">{{appList.length}}</span> </span>
-			<span class="other" onClick={{action "xxOnClick"}}>
-				{{bp-icon icon="add"}}
-			</span>
-		{{/bp-layout}}
-		{{#each appList as |item|}}
-			{{app-display name=item.name property=item.property timestamp=item.time imgSrc=item.img}}
-		{{/each}}
-		{{!-- {{app-display}}
-		{{app-display}}
-		{{app-display}} --}}
-		{{#bp-layout main="between" classNames="mt-4"}}
-			<span></span>
-			{{bp-pagination/mini
-		totalPageCounts=5 
-		onClickPage=(action (mut appsPage0))}}
+		{{#bp-layout direction="col" main="between" classNames="container-inner"}}
+			{{#bp-layout direction="col" main="between" classNames="inner-top"}}
+				{{#bp-layout tagName="h3" main="between" classNames="title"}}
+					<span class="title">已授权APP <span class="ml-2">{{appList.length}}</span> </span>
+					<span class="other" onClick={{action "xxOnClick"}}>
+						{{bp-icon icon="add"}}
+					</span>
+				{{/bp-layout}}
+				{{#each appList as |item|}}
+					{{app-display name=item.name property=item.property timestamp=item.time imgSrc=item.img}}
+				{{/each}}
+			{{/bp-layout}}
+			{{#bp-layout main="end" classNames="inner-bottom"}}
+				{{#bp-layout main="between" classNames="mt-4"}}
+					<span></span>
+					{{bp-pagination/mini
+				totalPageCounts=5 
+				onClickPage=(action (mut appsPage0))}}
+				{{/bp-layout}}
+			{{/bp-layout}}
 		{{/bp-layout}}
 	</div>
 	<div class="container p-4 bg-white">
-		{{#bp-layout tagName="h3" main="between" classNames="title"}}
-			<span class="title">已接入API <span class="ml-2">{{apiList.length}}</span> </span>
-			<span class="other" onClick={{action "xxOnClick"}}>
-				{{bp-icon icon="add"}}
-			</span>
-		{{/bp-layout}}
-		{{#each apiList as |item|}}
-			{{app-display timeType=1 name=item.name property=item.property timestamp=item.time imgSrc=item.img}}
-		{{/each}}
-		{{!-- {{app-display timeType=1}}
-		{{app-display timeType=1}}
-		{{app-display timeType=1}} --}}
-		{{#bp-layout main="between" classNames="mt-4"}}
-			<span></span>
-			{{bp-pagination/mini
-		totalPageCounts=5 
-		onClickPage=(action (mut appsPage))}}
+		{{#bp-layout direction="col" main="between" classNames="container-inner"}}
+			{{#bp-layout direction="col" main="between" classNames="inner-top"}}
+				{{#bp-layout tagName="h3" main="between" classNames="title"}}
+					<span class="title">已接入API <span class="ml-2">{{apiList.length}}</span> </span>
+					<span class="other" onClick={{action "xxOnClick"}}>
+						{{bp-icon icon="add"}}
+					</span>
+				{{/bp-layout}}
+				{{#each apiList as |item|}}
+					{{app-display timeType=1 name=item.name property=item.property timestamp=item.time imgSrc=item.img}}
+				{{/each}}
+			{{/bp-layout}}
+			{{#bp-layout main="end" classNames="inner-bottom"}}
+				{{#bp-layout main="between" classNames="mt-4"}}
+					<span></span>
+					{{bp-pagination/mini
+				totalPageCounts=5 
+				onClickPage=(action (mut appsPage))}}
+				{{/bp-layout}}
+			{{/bp-layout}}
 		{{/bp-layout}}
 	</div>
 {{/bp-layout}}
@@ -96,11 +102,6 @@
 		{{#each fileList as |item|}}
 			{{file-display fileType=item.type name=item.name size=item.size time=item.time}}
 		{{/each}}
-		{{!-- {{file-display}}
-		{{file-display}}
-		{{file-display}}
-		{{file-display}}
-		{{file-display}} --}}
 	{{/bp-layout}}
 	{{#bp-layout main="between" classNames="mt-4"}}
 		<span></span>

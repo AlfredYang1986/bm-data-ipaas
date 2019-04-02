@@ -62,7 +62,9 @@ h3.title {
 		-ms-flex: 1;
 		flex: 1;
 
-
+		.container-inner {
+			height: 100%;
+		}
 	}
 }
 

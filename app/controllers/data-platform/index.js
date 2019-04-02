@@ -17,6 +17,8 @@ export default Controller.extend({
     apiList: A([
         {id: '5', name: '大众点评', property: '分类', img: '/images/img_api_00.png', time: 1553933565274},
         {id: '6', name: '小鹅通', property: '分类', img: '/images/img_api_01.png', time: 1553933565274},
+        {id: '6', name: '微信', property: '分类', img: '/images/logo_wechat.png', time: 1554174643688},
+        {id: '6', name: '钉钉', property: '分类', img: '/images/logo_dingding.png', time: 1554174643688},
     ]),
 
     actions: {
