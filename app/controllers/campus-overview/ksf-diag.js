@@ -61,6 +61,9 @@ export default Controller.extend({
         },
         option() {
             this.transitionToRoute('page-not-found')
+        },
+        titleOnClick() {
+            this.transitionToRoute('study-progress')
         }
     },
 });

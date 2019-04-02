@@ -117,12 +117,16 @@
                     padding-top: 22px;
                     &:nth-child(1) {
                         @extend %header-small;
+                        cursor: pointer;
+                    }
+                    &:nth-child(2) {
+                        min-width: 118px;
                     }
                     &:nth-child(3) {
                         min-width: 203px;
                     }
-                    &:nth-child(2) {
-                        min-width: 118px;
+                    &:nth-last-child(1) {
+                        cursor: pointer;
                     }
                 }
                 &:nth-child(1) {
