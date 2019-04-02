@@ -5,7 +5,9 @@
             {{#n.link-to "dashboard"}}{{bp-icon icon='dashboard'}}Live Dashboard{{/n.link-to}}
             {{#n.dropdown title='增长应用' icon="growth" as |dd|}}
 				{{#dd.link-to "page-not-found"}}
-					添加应用
+                    {{#bp-layout direction='row' cross='center'}}
+                        <img src="/images/icon_add-circle@3x.png" alt="" class="nav-icon">添加应用
+                    {{/bp-layout}}
                 {{/dd.link-to}}
 				{{#dd.link-to "growth-application"}}
 					分销管理
