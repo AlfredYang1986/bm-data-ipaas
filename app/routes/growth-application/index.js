@@ -42,21 +42,21 @@ export default Route.extend({
 					title: '各渠道销售额占比', sales: '41,847',
 					circle: {
 						data: A([
-							{ value: 11942, name: 'SaaS平台' },
-							{ value: 34396, name: '小程序' },
-							{ value: 10904, name: '其他' },
+							{ value: 7495, name: 'SaaS平台' },
+							{ value: 44308, name: '小程序' },
+							{ value: 162300, name: '百造门店' },
 
 						]),
 						color: A(['#79e2f2', '#998dd9', '#79f2c0'])
 					}
 				},
 				{
-					title: '各渠道收益占比', sales: '17,284', 
+					title: '各渠道收益占比', sales: '17,284',
 					circle: {
 						data: A([
-							{ value: 47764, name: 'SaaS平台' },
-							{ value: 21794, name: '小程序' },
-							{ value: 2968, name: '其他' },
+							{ value: 248800, name: 'SaaS平台' },
+							{ value: 484800, name: '小程序' },
+							{ value: 741280, name: '百造门店' },
 
 						]),
 						color: A(['#79e2f2', '#998dd9', '#79f2c0'])
@@ -187,9 +187,9 @@ export default Route.extend({
 					income: 484800
 				},
 				{
-					name: '小鹅通', type: '其他', level: '一级',
-					purchase: 60, order: 100, money: 13807,
-					income: 58800
+					name: '百造门店', type: '所有店面总额', level: '一级',
+					purchase: 720, order: 1290, money: 162300,
+					income: 741280
 				},
 			])
 

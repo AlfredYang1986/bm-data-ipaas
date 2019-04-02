@@ -1,4 +1,4 @@
-{{#bp-layout tagName="h2" main="between" cross="center" 
+{{#bp-layout tagName="h2" main="between" cross="center"
 	classNames="title bg-white px-4"}}
 	<p class="title">分销情况</p>
 	{{#bp-dropdown widthSize="auto"   as |dd|}}
@@ -22,7 +22,7 @@
 {{#if (bp-eq tmpCycle.value 2)}}
 	{{#bp-layout main="between" wrap=true classNames="cycle mb-5"}}
 		{{#each model.cycleMonth as |cycle|}}
-			{{#bp-layout direction="col"  main="between" 
+			{{#bp-layout direction="col"  main="between"
 				classNames="line-container mr-2 mb-2 p-4 bg-white"}}
 				<p class="title">{{cycle.title}}</p>
 				{{bp-line
@@ -37,7 +37,7 @@
 		{{#each model.cycleWeek as |cycle|}}
 			{{#bp-layout direction="col"  main="between"  classNames="circle-contaienr mr-2 p-4 bg-white"}}
 				<p class="title">{{cycle.title}}</p>
-				{{bp-circle circleData=cycle.circle.data 
+				{{bp-circle circleData=cycle.circle.data
 			circleColor=cycle.circle.color seriesName=cycle.title
 				widthSize="auto"}}
 				<p class="desc text-center">
@@ -52,12 +52,12 @@
 	{{#tabs.tablist as |list|}}
 		<li class="nav-item">
 			{{#list.tab
-				selectPaneId='content' 
+				selectPaneId='content'
 				onSelect=(action (mut saleContent))}}分销内容{{/list.tab}}
 		</li>
 		<li class="nav-item">
 			{{#list.tab
-				selectPaneId='channel' 
+				selectPaneId='channel'
 				onSelect=(action (mut saleContent))}}分销渠道
 			{{/list.tab}}
 		</li>
@@ -105,8 +105,8 @@
 			{{/bp-layout}}
 			<table class="table distribution-table">
 				<thead>
+					<th>渠道类目</th>
 					<th>渠道名称</th>
-					<th>类型</th>
 					<th>渠道等级</th>
 					<th>采购内容总数</th>
 					<th>分销订单总数 </th>
