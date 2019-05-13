@@ -19,7 +19,7 @@ RUN npm update && \
 
 WORKDIR /app
 
-LABEL ipaas.version=0.0.0
+LABEL bmipaas.version=0.0.11
 
 RUN git clone https://github.com/AlfredYang1986/bm-data-ipaas.git && \
 	git clone https://github.com/PharbersDeveloper/BP-Components.git 
@@ -42,4 +42,4 @@ RUN ember b -prod
 
 EXPOSE 4200
 
-ENTRYPOINT ["ember", "s"]
+ENTRYPOINT ["ember", "s", "--live-reload=false"]
