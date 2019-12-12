@@ -79,9 +79,10 @@
             <p class="section-primary-title">营销效率</p>
         {{/bp-layout}}
         {{#bp-layout direction='row' main='center' cross='center' classNames='efficiency-area'}}
-            {{#each model.markering as |mk|}}
+            {{#each model.markering as |mk index|}}
                 {{#bp-layout direction='row' main='between' cross='center' classNames='eff-list p-4'}}
                     {{bp-circle
+                        eid=(concat "compus" index)
                         circleData=mk.circleData
                         circleColor=model.circleColor
                         }}
