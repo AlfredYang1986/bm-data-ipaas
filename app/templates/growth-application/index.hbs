@@ -21,11 +21,12 @@
 {{/bp-layout}}
 {{#if (bp-eq tmpCycle.value 2)}}
 	{{#bp-layout main="between" wrap=true classNames="cycle mb-5"}}
-		{{#each model.cycleMonth as |cycle|}}
+		{{#each model.cycleMonth as |cycle index|}}
 			{{#bp-layout direction="col"  main="between"
 				classNames="line-container mr-2 mb-2 p-4 bg-white"}}
 				<p class="title">{{cycle.title}}</p>
 				{{bp-line
+					eid=(concat "growth" index)
 					lineData=cycle.line.lineData
 					lineColor=model.lineColor
 					legendPosition=model.legendPosition}}
