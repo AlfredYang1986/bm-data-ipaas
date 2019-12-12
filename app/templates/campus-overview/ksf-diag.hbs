@@ -201,7 +201,7 @@
 				            <p class="text-p-small">单位时间 <span> 月</span></p>
 				        {{/bp-layout}}
 				        {{#bp-layout direction='row' main='between'}}
-				            {{#each model.business as |ga|}}
+				            {{#each model.business as |ga index|}}
 				                {{#bp-layout direction='row' main='between' cross='center' classNames='eff-list p-4'}}
 				                    {{#bp-layout direction='col' classNames='circle-desc'}}
 				                        {{#bp-layout direction='row' cross='center'}}
@@ -212,6 +212,7 @@
 				                    {{/bp-layout}}
 
 				                    {{bp-circle
+										eid=(concat "ksfdiag" index)
 				                        circleData=ga.circleData
 				                        circleColor=ga.circleColor
 				                        classNames='circle-area'

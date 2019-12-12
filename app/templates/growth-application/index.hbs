@@ -34,10 +34,10 @@
 	{{/bp-layout}}
 {{else}}
 	{{#bp-layout main="between" classNames="cycle mb-5"}}
-		{{#each model.cycleWeek as |cycle|}}
+		{{#each model.cycleWeek as |cycle index|}}
 			{{#bp-layout direction="col"  main="between"  classNames="circle-contaienr mr-2 p-4 bg-white"}}
 				<p class="title">{{cycle.title}}</p>
-				{{bp-circle circleData=cycle.circle.data
+				{{bp-circle eid=(concat "growth" index) circleData=cycle.circle.data
 			circleColor=cycle.circle.color
 				widthSize="auto"}}
 				<p class="desc text-center">
